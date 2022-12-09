@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import ImageSlider from "./components/ImageSlider";
 import sea from "./images/sea.jpg";
 import mountain from "./images/mountain.jpg";
 import football from "./images/football.jpg";
+import Home from "./pages/Home";
 
 const App = () => {
   const slides = [
@@ -21,7 +21,7 @@ const App = () => {
   ];
   return (
     <>
-      <Link to="/login">This is HOME page routing to login</Link>
+      <Home />
       <ImageSlider slides={slides} />
     </>
   );

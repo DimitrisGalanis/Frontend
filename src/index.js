@@ -11,14 +11,14 @@ import Koinonia from "./pages/Koinonia";
 import Oikonomia from "./pages/Oikonomia";
 import Diethni from "./pages/Diethni";
 import Travel from "./pages/Travel";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./helper/ScrollToTop";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <Header />
       <Outlet />
       <Footer />
       <ScrollToTop />
