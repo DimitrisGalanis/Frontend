@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+import ImageSlider from "./components/ImageSlider";
+import sea from "./images/sea.jpg";
+import mountain from "./images/mountain.jpg";
+import football from "./images/football.jpg";
 
-function App() {
+const App = () => {
+  const slides = [
+    {
+      title: "football",
+      url: football,
+    },
+    {
+      title: "sea",
+      url: sea,
+    },
+    {
+      title: "mountain",
+      url: mountain,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Link to="/login">This is HOME page routing to login</Link>
+      <ImageSlider slides={slides} />
+    </>
   );
-}
+};
 
 export default App;
