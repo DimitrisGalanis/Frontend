@@ -2,17 +2,71 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./Login";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Home from "./pages/Home";
+import Post from "./pages/Post";
+import Koinonia from "./pages/Koinonia";
+import Oikonomia from "./pages/Oikonomia";
+import Diethni from "./pages/Diethni";
+import Travel from "./pages/Travel";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./helper/ScrollToTop";
 
+const Layout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+      <ScrollToTop />
+    </>
+  );
+};
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/post/:id",
+        element: <Post />,
+      },
+      {
+        //Todo fix it
+        path: "/koinonia",
+        element: <Koinonia />,
+      },
+      {
+        //Todo fix it
+        path: "/Oikonomia",
+        element: <Oikonomia />,
+      },
+      {
+        //Todo fix it
+        path: "/diethni",
+        element: <Diethni />,
+      },
+      {
+        //Todo fix it
+        path: "/travel",
+        element: <Travel />,
+      },
+    ],
   },
   {
-    path: "/login",
+    path: "/Login",
     element: <Login />,
+  },
+  {
+    path: "/Signup",
+    element: <Signup />,
   },
 ]);
 
