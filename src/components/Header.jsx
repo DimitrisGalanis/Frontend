@@ -1,63 +1,46 @@
 import React from "react";
-import Rubiks from "../images/rubiksbg.png";
+import Rubiks from "../images/rubiks2.jpg";
 import { Link } from "react-router-dom";
-import Search from "../helper/search.jsx";
 import useMediaQuery from "../helper/useMediaQuery.jsx";
+import Barsicon from "../helper/Barsicon.jsx";
+import SearchIcon from "../helper/SearchIcon";
+
+// className="w-12 h-26 md:-ml-3 md:w-34 md:h-28 object-cover md:pb-3"
 
 function Header() {
   const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
+
   return (
     <>
-      <header className="flex  justify-between shadow-md mb-4">
-        {/* Logo & Text */}
-        <div className="flex justify-items-start items-center -mt-4">
-          <img
-            className="-ml-3 w-34 h-28 object-contain"
-            src={Rubiks}
-            alt="logo rubiks for brand"
-          />
-          <div className="font-serif text-2xl sm:text-3xl lg:text-4xl">
-            Rubiks
-          </div>
-        </div>
+      <header className="border-b border-neutral-300">
+        <div className="container mx-auto max-w-8xl flex justify-between">
+          {/* Logo & Text */}
 
-        {/* Links */}
-        {isAboveSmallScreens ? (
-          <>
-            <div className="flex items-center mb-3 text-gray-700 rounded ">
-              <div className="links md:inline-flex items-center space-x-10 font-serif text-xl sm:space-x-4 md:space-x-7">
-                <Link
-                  className="links hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  to="/koinonia"
-                >
-                  Κοινωνία
-                </Link>
-                <Link
-                  className="links hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  to="/oikonomia"
-                >
-                  Οικονομία
-                </Link>
-                <Link
-                  className="links hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  to="/diethni"
-                >
-                  Διεθνή
-                </Link>
-                <Link
-                  className="links hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  to="/travel"
-                >
-                  Travel
-                </Link>
+          <Link to="/">
+            <div className="flex justify-items-start items-center -mt-4">
+              <img
+                className="w-12 h-26 lg:w-full lg:h-24 object-cover"
+                src={Rubiks}
+                alt="logo rubiks for brand"
+              />
+
+              <div className="text-2xl pt-4 text-gray-700 md:text-3xl pl-2 font-semibold ">
+                Rubiks
               </div>
             </div>
-          </>
-        ) : (
-          <> </>
-        )}
-        {/* Search */}
-        <Search />
+          </Link>
+
+          <div className="hidden md:inline-flex items-center space-x-6 text-lg font-medium">
+            <h3>World</h3>
+            <h3>Business</h3>
+            <h3>Politics</h3>
+            <h3>Sports</h3>
+          </div>
+          <div className="flex items-center gap-x-3">
+            <SearchIcon />
+            <Barsicon />
+          </div>
+        </div>
       </header>
     </>
   );

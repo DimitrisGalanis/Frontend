@@ -10,10 +10,11 @@ import Post from "./pages/Post";
 import Koinonia from "./pages/Koinonia";
 import Oikonomia from "./pages/Oikonomia";
 import Diethni from "./pages/Diethni";
-import Travel from "./pages/Travel";
+import Texnologia from "./pages/Texnologia";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./helper/ScrollToTop";
+import Athlitismos from "./pages/Athlitismos";
 
 const Layout = () => {
   return (
@@ -40,13 +41,8 @@ const router = createBrowserRouter([
       },
       {
         //Todo fix it
-        path: "/koinonia",
+        path: "/ellada",
         element: <Koinonia />,
-      },
-      {
-        //Todo fix it
-        path: "/Oikonomia",
-        element: <Oikonomia />,
       },
       {
         //Todo fix it
@@ -55,8 +51,18 @@ const router = createBrowserRouter([
       },
       {
         //Todo fix it
-        path: "/travel",
-        element: <Travel />,
+        path: "/athlitismos",
+        element: <Athlitismos />,
+      },
+      {
+        //Todo fix it
+        path: "/texnologia",
+        element: <Texnologia />,
+      },
+      {
+        //Todo fix it
+        path: "/oikonomia",
+        element: <Oikonomia />,
       },
     ],
   },
