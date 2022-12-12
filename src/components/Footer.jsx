@@ -42,9 +42,9 @@ function Footer() {
           </div>
         </div>
 
-        <div className="items-center flex justify-between space-x-5 text-white hover:cursor-pointer py-2">
-          <h1>Privacy</h1>
-          <h1>Terms</h1>
+        <div className="items-center flex justify-between space-x-5 text-white py-2">
+          <h1 className="hover:cursor-pointer">Privacy</h1>
+          <h1 className="hover:cursor-pointer">Terms</h1>
           <h1>@2022 Rubiks,INC</h1>
         </div>
         <h1 className="text-gray-200 font-semibold pt-4 border-t">
