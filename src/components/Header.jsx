@@ -31,7 +31,9 @@ function Header() {
           </Link>
 
           <div className="hidden md:inline-flex items-center space-x-6 text-lg font-medium">
-            <h3>World</h3>
+            <h3>
+              <Link to="/texnologia">World</Link>
+            </h3>
             <h3>Business</h3>
             <h3>Politics</h3>
             <h3>Sports</h3>
