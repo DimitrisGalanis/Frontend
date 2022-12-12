@@ -27,6 +27,7 @@ function Home() {
           Latest News
         </span>
       </div>
+
       <ImageSlider slides={slides} />
     </div>
   );

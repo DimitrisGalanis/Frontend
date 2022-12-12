@@ -2,7 +2,7 @@ import React from "react";
 import useMediaQuery from "./useMediaQuery";
 
 function SearchIcon() {
-  const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
+  const isAboveSmallScreens = useMediaQuery("(min-width: 767px)");
   return isAboveSmallScreens ? (
     <div className="relative hidden md:block">
       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -29,22 +29,24 @@ function SearchIcon() {
       />
     </div>
   ) : (
-    <button>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 21 21"
-        strokeWidth="1.75"
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-        />
-      </svg>
-    </button>
+    <>
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 21 21"
+          strokeWidth="1.75"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
+      </button>
+    </>
   );
 }
 

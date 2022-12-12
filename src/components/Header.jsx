@@ -2,14 +2,13 @@ import React from "react";
 import Rubiks from "../images/rubiks2.jpg";
 import { Link } from "react-router-dom";
 import useMediaQuery from "../helper/useMediaQuery.jsx";
-import Barsicon from "../helper/Barsicon.jsx";
 import SearchIcon from "../helper/SearchIcon";
-
-// className="w-12 h-26 md:-ml-3 md:w-34 md:h-28 object-cover md:pb-3"
+import { useState } from "react";
+import Menu from "../helper/Menu.jsx";
 
 function Header() {
   const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
-
+  const [isNavOpen, setIsNavOpen] = useState(true);
   return (
     <>
       <header className="border-b border-neutral-300">
@@ -38,10 +37,47 @@ function Header() {
           </div>
           <div className="flex items-center gap-x-3">
             <SearchIcon />
-            <Barsicon />
+            <button
+              className="mr-4 lg:mr-0 block md:hidden"
+              onClick={() => setIsNavOpen((prev) => !prev)}
+            >
+              {isNavOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="2 2 20 20"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-7 h-7"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="2 2 20 20"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-7 h-7"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
       </header>
+
+      {isNavOpen ? <></> : <Menu />}
     </>
   );
 }
