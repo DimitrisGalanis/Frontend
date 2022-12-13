@@ -10,7 +10,7 @@ const posts = [
   },
   {
     id: 2,
-    title: "Noteworthy technology acquisitions 2021",
+    title: "Noteworthy technology acquisitions 2021 ",
     description:
       " Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem",
     img: "https://images.pexels.com/photos/86993/pexels-photo-86993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -28,7 +28,7 @@ function Abc() {
   return (
     <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3">
       {/* left part */}
-      <div className="">
+      <div className="border-b border-neutral-400">
         <img
           src={posts[0].img}
           alt=""
@@ -39,8 +39,9 @@ function Abc() {
           {posts[0].title}
         </div>
 
-        <div className="pt-1 italic text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4">
-          12.10.2022 2.23 PM GMT+3
+        <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
+          <div className="flex sm:hidden text-red-700 font-medium"> Europe</div>
+          <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
         </div>
         <div className="px-2 sm:pl-0 pt-3 text-xl font-serif text-gray-700">
           {posts[0].description}
@@ -59,9 +60,14 @@ function Abc() {
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[1].title}
           </div>
-          <div className="pt-1 italic text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-sm">
-            12.10.2022 2.23 PM GMT+3
+          <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
+            <div className="flex sm:hidden text-red-700 font-medium">
+              {" "}
+              Europe
+            </div>
+            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
           </div>
+          <div className="border-b mt-2 border-neutral-400" />
         </div>
         <div>
           <img
@@ -72,9 +78,14 @@ function Abc() {
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[2].title}
           </div>
-          <div className="pt-1 italic text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-sm">
-            12.10.2022 2.23 PM GMT+3
+          <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
+            <div className="flex sm:hidden text-red-700 font-medium">
+              {" "}
+              Europe
+            </div>
+            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
           </div>
+          <div className="border-b mt-2 border-neutral-400" />
         </div>
         <div>
           <img
@@ -85,10 +96,16 @@ function Abc() {
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[0].title}
           </div>
-          <div className="pt-1 italic text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-sm">
-            12.10.2022 2.23 PM GMT+3
+          <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
+            <div className="flex sm:hidden text-red-700 font-medium">
+              {" "}
+              Europe
+            </div>
+            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
           </div>
+          <div className="border-b mt-2 border-neutral-400" />
         </div>
+
         <div>
           <img
             src={posts[1].img}
@@ -98,9 +115,15 @@ function Abc() {
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[1].title}
           </div>
-          <div className="pt-1 italic text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-sm">
-            12.10.2022 2.23 PM GMT+3
+          <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
+            <div className="flex sm:hidden text-red-700 font-medium">
+              {" "}
+              Europe
+            </div>
+            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
           </div>
+
+          <div className="border-b mt-2 border-neutral-400" />
         </div>
       </div>
     </div>
