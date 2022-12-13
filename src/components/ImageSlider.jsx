@@ -28,13 +28,13 @@ const ImageSlider = ({ slides }) => {
       <div className="container mx-auto max-w-8xl position relative pt-3">
         <img
           src={slides[index].url}
-          className=" h-96 w-full md:h-98 object-cover"
+          className=" h-80 w-full sm:h-98 object-cover"
           alt=""
         />
 
         <button
           onClick={(e) => previousSlide(e, index, setIndex)}
-          className=" absolute bottom-1/3"
+          className=" absolute bottom-1/3 pl-1"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const ImageSlider = ({ slides }) => {
             viewBox="1 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-7 h-7 bg-gray-300 rounded-2xl animate-pulse"
+            className="w-7 h-7 bg-white/60 rounded-2xl"
           >
             <path
               strokeLinecap="round"
@@ -53,7 +53,7 @@ const ImageSlider = ({ slides }) => {
         </button>
         <button
           onClick={(e) => nextSlide(e, index, setIndex)}
-          className="absolute bottom-1/3 right-1"
+          className="absolute bottom-1/3 right-1 pr-1"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const ImageSlider = ({ slides }) => {
             viewBox="-1 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-7 h-7 bg-gray-300 rounded-2xl animate-pulse"
+            className="w-7 h-7 bg-white/60 rounded-2xl"
           >
             <path
               strokeLinecap="round"

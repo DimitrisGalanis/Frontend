@@ -12,7 +12,7 @@ function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(true);
   return (
     <>
-      <header className="border-b border-neutral-300">
+      <header className="border-b border-neutral-400">
         <div className="container mx-auto max-w-8xl flex justify-between">
           {/* Logo & Text */}
 
@@ -24,7 +24,7 @@ function Header() {
                 alt="logo rubiks for brand"
               />
 
-              <div className="text-2xl pt-4 text-gray-700 md:text-3xl pl-2 font-semibold ">
+              <div className="text-2xl pt-4 text-gblack md:text-3xl pl-2 font-semibold ">
                 Rubiks
               </div>
             </div>
@@ -60,7 +60,7 @@ function Header() {
                 <input
                   type="text"
                   id="search-navbar"
-                  className="w-full p-2 pl-10 text-sm text-gray-900 border border-gray-400 rounded-lg bg-gray-50"
+                  className="w-full p-2 pl-10 text-sm text-gray-900 border border-gray-500 rounded-lg bg-gray-50 focus:outline-black/70 "
                   placeholder="Search..."
                 />
               </div>

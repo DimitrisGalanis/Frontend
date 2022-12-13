@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className=" flex flex-col pt-0.25 bg-black/80 p-3 sm:flex-row justify-between">
+    <div className=" flex flex-col pt-0.25 bg-black/90 p-3 sm:flex-row justify-between">
       <div className="container max-w-8xl mx-auto">
         <div className="flex space-x-4 pb-2 sm:pb-0 contrainer max-w-8xl mx-auto border-b">
           <div className="pt-2.5 pl-2.5 w-9 h-9 rounded-full bg- hover:cursor-pointer">
@@ -47,7 +47,7 @@ function Footer() {
           <h1 className="hover:cursor-pointer">Terms</h1>
           <h1>@2022 Rubiks,INC</h1>
         </div>
-        <h1 className="text-gray-200 font-semibold pt-4 border-t">
+        <h1 className="text-gray-100 font-semibold pt-4 border-t">
           All rights Reserved
         </h1>
       </div>

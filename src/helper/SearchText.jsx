@@ -3,16 +3,16 @@ import React from "react";
 function SearchText() {
   return (
     // TODO Make it a form
-    <div className="max-w-8xl mx-auto flex justify-between items-center pr-4 py-2 bg-gray-700">
+    <div className="max-w-8xl mx-auto flex justify-between items-center pr-4 py-2 bg-black">
       <input
         type="text"
-        className="flex-1 h-8 rounded-xl placeholder-gray-400 mx-2 border border-gray-700 pl-4 font-medium "
+        className="flex-1 h-8 rounded-lg placeholder-gray-400 mx-2 border border-gray-700 pl-4 font-medium focus:outline-none"
         placeholder="Αναζήτηση ..."
       />
       <button className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fillRule="none"
           viewBox="2 5 20 15"
           strokeWidth="1.5"
           stroke="currentColor"

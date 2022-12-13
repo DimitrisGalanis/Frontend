@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        98: "46rem",
+        98: "38rem",
       },
       fontFamily: {
         Roboto: ["Rubik Distressed", "cursive"],
