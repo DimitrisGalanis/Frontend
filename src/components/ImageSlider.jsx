@@ -72,8 +72,20 @@ const ImageSlider = ({ slides }) => {
         </button>
       </div>
 
-      <div>{index}</div>
-      <div>{slides[index].title}</div>
+      <div className="pt-1 sm:pl-0 container mx-auto max-w-8xl bg-gray-200/80">
+        <div className="text-center text-cyan-700 font-medium text-xl flex justify-center space-x-3 pt-1">
+          <div className="">Καιρός</div>
+          <div className="">10/12/2022</div>
+        </div>
+        {/* <div className="">{index}</div>
+          <div className="">{slides[index].title}</div> */}
+        <div className="text-center font-medium text-2xl px-3 pt-2 sm:text-3xl lg:text-4xl pb-10">
+          «Πάμε προς Πασχούγεννα»: Η αισιόδοξη πρόγνωση Μαρουσάκη για τον καιρό
+          στις γιορτές
+        </div>
+      </div>
+
+      <div className="border-b border-neutral-400"></div>
     </>
   );
 };

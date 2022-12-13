@@ -25,7 +25,7 @@ function Header() {
               />
 
               <div className="text-2xl pt-4 text-gblack md:text-3xl pl-2 font-semibold ">
-                Rubiks 1
+                Rubiks
               </div>
             </div>
           </Link>
