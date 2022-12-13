@@ -73,18 +73,34 @@ const ImageSlider = ({ slides }) => {
       </div>
 
       <div className="pt-1 sm:pl-0 container mx-auto max-w-8xl bg-gray-200/80">
-        <div className="text-center text-cyan-700 font-medium text-xl flex justify-center space-x-3 pt-1">
-          <div className="">Καιρός</div>
-          <div className="">10/12/2022</div>
+        <div className="text-center text-red-700 font-medium text-xl flex justify-center space-x-3 pt-1">
+          Καιρός
         </div>
         {/* <div className="">{index}</div>
           <div className="">{slides[index].title}</div> */}
         <div className="text-center font-medium text-2xl px-3 pt-2 sm:text-3xl lg:text-4xl pb-10">
           «Πάμε προς Πασχούγεννα»: Η αισιόδοξη πρόγνωση Μαρουσάκη για τον καιρό
-          στις γιορτές
+          στις γιορτές.
+        </div>
+        <div className="flex justify-start text-gray-500/90 font-medium">
+          <div className="pl-3 pr-5">10.12.2022</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 -2 27 27"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <div className="pl-1">15:45</div>
         </div>
       </div>
-
       <div className="border-b border-neutral-400"></div>
     </>
   );
