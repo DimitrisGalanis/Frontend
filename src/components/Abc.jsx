@@ -5,7 +5,7 @@ const posts = [
     id: 1,
     title: " Basic Snow techniques for Alpes 2022",
     description:
-      "Παμε για παρακάτω πληροφορίες αντ1, μαζί με τον Παπαπαρα είναι μια σοβαρή επένδυση στον τομέα της τεχνολογίας.",
+      "Παμε για παρακάτω πληροφορίες αντ1, μαζί με τον Name είναι μια σοβαρή επένδυση στον τομέα της τεχνολογίας.",
     img: "https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
@@ -26,36 +26,36 @@ const posts = [
 
 function Abc() {
   return (
-    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3">
+    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2">
       {/* left part */}
       <div className="border-b border-neutral-400">
         <img
           src={posts[0].img}
           alt=""
-          className="h-80 sm:h-99 rounded-none sm:rounded-xl"
+          className="h-80 md:h-81 w-full lg:h-92 rounded-none sm:rounded-3xl"
         />
 
-        <div className="text-3xl sm:text-4xl pt-5 font-bold text-gray-700 pl-2 sm:pl-0">
+        <div className="text-3xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2">
           {posts[0].title}
         </div>
 
         <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
           <div className="flex sm:hidden text-red-700 font-medium"> Europe</div>
-          <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
+          <div className="italic pl-2">12.10.2022 2.23 PM GMT+3 </div>
         </div>
-        <div className="px-2 sm:pl-0 pt-3 text-xl font-serif text-gray-700">
+        <div className="pl-2 pr-2 sm:pl-2 pt-3 text-xl font-serif text-gray-700">
           {posts[0].description}
         </div>
       </div>
 
       {/* Right part */}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pl-0 lg:pl-6 pt-5 lg:pt-0">
         <div className="">
           <img
             src={posts[1].img}
             alt=""
-            className="w-screen h-80 rounded-none sm:rounded-xl object-cover"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[1].title}
@@ -73,7 +73,7 @@ function Abc() {
           <img
             src={posts[2].img}
             alt=""
-            className="h-80 rounded-none sm:rounded-xl w-screen"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[2].title}
@@ -91,7 +91,7 @@ function Abc() {
           <img
             src={posts[0].img}
             alt=""
-            className="h-80 rounded-none sm:rounded-2xl w-screen"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[0].title}
@@ -110,7 +110,7 @@ function Abc() {
           <img
             src={posts[1].img}
             alt=""
-            className="h-80 rounded-none sm:rounded-3xl w-screen object-cover"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[1].title}

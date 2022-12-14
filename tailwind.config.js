@@ -3,6 +3,9 @@ module.exports = {
   theme: {
     extend: {
       height: {
+        75: "19rem",
+        81: "25rem",
+        92: "31rem",
         99: "33rem",
         97: "34rem",
         98: "38rem",
