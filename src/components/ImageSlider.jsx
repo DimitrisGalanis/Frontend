@@ -28,7 +28,7 @@ const ImageSlider = ({ slides }) => {
       <div className="container mx-auto max-8xl position relative pt-3">
         <img
           src={slides[index].url}
-          className=" h-80 w-full md:h-80 2xl:h-97 object-cover"
+          className=" h-80 w-full md:h-81 2xl:h-98 object-cover"
           alt=""
         />
 
