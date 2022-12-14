@@ -32,30 +32,30 @@ function Abc() {
         <img
           src={posts[0].img}
           alt=""
-          className="h-80 md:h-92 rounded-none sm:rounded-3xl"
+          className="h-80 md:h-81 w-full lg:h-92 rounded-none sm:rounded-3xl"
         />
 
-        <div className="text-3xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2 sm:pl-0">
+        <div className="text-3xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2">
           {posts[0].title}
         </div>
 
         <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
           <div className="flex sm:hidden text-red-700 font-medium"> Europe</div>
-          <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
+          <div className="italic pl-2">12.10.2022 2.23 PM GMT+3 </div>
         </div>
-        <div className="px-2 sm:pl-0 pt-3 text-xl font-serif text-gray-700">
+        <div className="pl-2 pr-2 sm:pl-2 pt-3 text-xl font-serif text-gray-700">
           {posts[0].description}
         </div>
       </div>
 
       {/* Right part */}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pl-0 sm:pl-6 pt-5 sm:pt-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pl-0 lg:pl-6 pt-5 lg:pt-0">
         <div className="">
           <img
             src={posts[1].img}
             alt=""
-            className="w-screen h-72 2xl:h-60 md:h-56 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[1].title}
@@ -73,7 +73,7 @@ function Abc() {
           <img
             src={posts[2].img}
             alt=""
-            className="w-screen h-72 2xl:h-60 md:h-56 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[2].title}
@@ -91,13 +91,16 @@ function Abc() {
           <img
             src={posts[0].img}
             alt=""
-            className="w-screen h-72 2xl:h-60 md:h-56 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[0].title}
           </div>
           <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
-            <div className="flex text-red-700 font-medium"> Europe</div>
+            <div className="flex sm:hidden text-red-700 font-medium">
+              {" "}
+              Europe
+            </div>
             <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
           </div>
           <div className="border-b mt-2 border-neutral-400" />
@@ -107,7 +110,7 @@ function Abc() {
           <img
             src={posts[1].img}
             alt=""
-            className="w-screen h-72 2xl:h-60 md:h-56 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
           />
           <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
             {posts[1].title}
