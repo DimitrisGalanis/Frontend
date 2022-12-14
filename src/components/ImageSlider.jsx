@@ -25,10 +25,10 @@ const ImageSlider = ({ slides }) => {
   const [index, setIndex] = useState(0);
   return (
     <>
-      <div className="container mx-auto max-w-8xl position relative pt-3">
+      <div className="container mx-auto max-8xl position relative pt-3">
         <img
           src={slides[index].url}
-          className=" h-80 w-full sm:h-98 object-cover"
+          className=" h-80 w-full md:h-80 2xl:h-97 object-cover"
           alt=""
         />
 
@@ -78,7 +78,7 @@ const ImageSlider = ({ slides }) => {
         </div>
         {/* <div className="">{index}</div>
           <div className="">{slides[index].title}</div> */}
-        <div className="text-center font-medium text-2xl px-3 pt-2 sm:text-3xl lg:text-4xl pb-10">
+        <div className="text-center font-medium text-2xl px-3 pt-2 sm:text-3xl 2xl:text-4xl pb-10">
           «Πάμε προς Πασχούγεννα»: Η αισιόδοξη πρόγνωση Μαρουσάκη για τον καιρό
           στις γιορτές.
         </div>

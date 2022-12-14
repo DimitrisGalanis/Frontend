@@ -23,7 +23,7 @@ const slides = [
 function Home() {
   return (
     <div className="bg-gray-50 pt-0 md:pt-2 shadow-md">
-      <div className="container mx-auto pl-2 sm:pl-0 md:pl-2 pt-3">
+      <div className="container mx-auto pl-2 2xl:pl-0 pt-3">
         <span className="text-gray-800 text-xl border-l-2 pl-2 border-red-600 md:text-2xl font-medium">
           Latest News
         </span>
@@ -31,7 +31,7 @@ function Home() {
 
       <ImageSlider slides={slides} />
 
-      <div className="container mx-auto pl-2 lg:pl-0 py-4 md:pl-2">
+      <div className="container mx-auto pl-2 2xl:pl-0 py-4">
         <span className="text-gray-800 text-xl border-l-2 pl-2 border-red-600 md:text-2xl font-medium">
           Europe
         </span>
@@ -39,7 +39,7 @@ function Home() {
 
       <Abc />
 
-      <div className="container mx-auto pl-2 lg:pl-0 py-4 md:pl-2">
+      <div className="container mx-auto pl-2  py-4 2xl:pl-0">
         <span className="text-gray-800 text-xl border-l-2 pl-2 border-red-600 md:text-2xl font-medium">
           Sports
         </span>
