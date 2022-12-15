@@ -2,7 +2,7 @@ import React from "react";
 
 function SportPosts() {
   return (
-    <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-3 md:px-3 px-0">
+    <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-5 md:px-3 px-0">
       <div className="bg-black">
         <div className="relative">
           <img

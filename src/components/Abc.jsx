@@ -26,7 +26,7 @@ const posts = [
 
 function Abc() {
   return (
-    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5 md:px-3 px-0">
+    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5 md:px-3 px-0 space-x-0 lg:space-x-5">
       {/* left part */}
       <div className="border-b border-neutral-400">
         <img
@@ -35,7 +35,7 @@ function Abc() {
           className="w-full h-72 md:h-80 xl:h-82 rounded-none lg:rounded-3xl"
         />
 
-        <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700">
+        <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-semibold lg:font-bold text-gray-700 pl-2 lg:pl-0">
           {posts[0].title}
         </div>
 
@@ -43,14 +43,14 @@ function Abc() {
           <div className="flex sm:hidden text-red-700 font-medium"> Europe</div>
           {/* <div className="italic pl-2">12.10.2022 2.23 PM GMT+3 </div> */}
         </div>
-        <div className="pr-2 pt-3 text-lg font-serif text-gray-700">
+        <div className="pr-2 pt-3 text-lg font-serif text-gray-700 pl-2 lg:pl-0">
           {posts[0].description}
         </div>
       </div>
 
       {/* Right part */}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pl-0 lg:pl-6 pt-5 lg:pt-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pt-5 lg:pt-0">
         <div className="">
           <img
             src={posts[1].img}
