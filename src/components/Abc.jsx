@@ -26,9 +26,9 @@ const posts = [
 
 function Abc() {
   return (
-    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5 md:px-3 px-0 space-x-0 lg:space-x-5">
+    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5  px-3 space-x-0 lg:space-x-3">
       {/* left part */}
-      <div className="border-b border-neutral-400">
+      <div className="border-b border-neutral-400 mr-2 ">
         <img
           src={posts[0].img}
           alt=""
