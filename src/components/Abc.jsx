@@ -26,13 +26,13 @@ const posts = [
 
 function Abc() {
   return (
-    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2">
+    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5">
       {/* left part */}
       <div className="border-b border-neutral-400">
         <img
           src={posts[0].img}
           alt=""
-          className="h-80 md:h-81 w-full lg:h-92 rounded-none sm:rounded-3xl"
+          className="w-full h-80 md:h-80 xl:h-82 rounded-none sm:rounded-3xl"
         />
 
         <div className="text-3xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2">
@@ -65,7 +65,7 @@ function Abc() {
               {" "}
               Europe
             </div>
-            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
+            {/* <div className="italic">12.10.2022 2.23 PM GMT+3 </div> */}
           </div>
           <div className="border-b mt-2 border-neutral-400" />
         </div>
@@ -83,7 +83,7 @@ function Abc() {
               {" "}
               Europe
             </div>
-            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
+            {/* <div className="italic">12.10.2022 2.23 PM GMT+3 </div> */}
           </div>
           <div className="border-b mt-2 border-neutral-400" />
         </div>
@@ -101,7 +101,7 @@ function Abc() {
               {" "}
               Europe
             </div>
-            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
+            {/* <div className="italic">12.10.2022 2.23 PM GMT+3 </div> */}
           </div>
           <div className="border-b mt-2 border-neutral-400" />
         </div>
@@ -120,7 +120,7 @@ function Abc() {
               {" "}
               Europe
             </div>
-            <div className="italic">12.10.2022 2.23 PM GMT+3 </div>
+            {/* <div className="italic">12.10.2022 2.23 PM GMT+3 </div> */}
           </div>
 
           <div className="border-b mt-2 border-neutral-400" />

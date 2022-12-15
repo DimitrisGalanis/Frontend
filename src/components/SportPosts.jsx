@@ -2,11 +2,11 @@ import React from "react";
 
 function SportPosts() {
   return (
-    <div className="container mx-auto max-w-8xl flex-row lg:flex  lg:space-x-3 ">
+    <div className="container mx-auto max-w-8xl flex-row lg:flex  lg:space-x-3">
       <div className="bg-black">
         <div className="relative">
           <img
-            className="h-80 lg:h-92 w-screen"
+            className="h-80 md:h-81 2xl:h-82 w-screen"
             src="https://images.pexels.com/photos/34514/spot-runs-start-la.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
@@ -43,7 +43,7 @@ function SportPosts() {
       <div className="mt-4 lg:mt-0 bg-black">
         <div className="relative">
           <img
-            className="h-80 lg:h-92 w-screen"
+            className="h-80 md:h-81 2xl:h-82 w-screen"
             src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="w"
           />

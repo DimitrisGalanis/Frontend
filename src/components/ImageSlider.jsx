@@ -25,10 +25,10 @@ const ImageSlider = ({ slides }) => {
   const [index, setIndex] = useState(0);
   return (
     <>
-      <div className="container mx-auto position relative pt-3">
+      <div className="container mx-auto max-w-8xl position relative pt-3">
         <img
           src={slides[index].url}
-          className=" h-80 w-full md:h-8 xl:h-92 object-cover"
+          className="h-80 w-full md:h-81 2xl:h-92 object-cover"
           alt=""
         />
 

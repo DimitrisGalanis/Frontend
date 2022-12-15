@@ -38,15 +38,15 @@ function Home() {
         </span>
       </div>
 
-      <Abc />
+      <SportPosts />
 
       <div className="container mx-auto pl-2  py-4">
         <span className="text-gray-800 text-xl border-l-2 pl-2 border-red-600 md:text-2xl font-medium">
-          Sports
+          Weather
         </span>
       </div>
 
-      <SportPosts />
+      <Abc />
     </div>
   );
 }
