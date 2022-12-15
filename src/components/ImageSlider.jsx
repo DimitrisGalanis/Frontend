@@ -55,7 +55,7 @@ const ImageSlider = ({ slides }) => {
         </button>
         <button
           onClick={(e) => nextSlide(e, index, setIndex)}
-          className="absolute bottom-1/2 right-1 pr-3"
+          className="absolute bottom-1/2 right-1 pr-0 md:pr-3"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

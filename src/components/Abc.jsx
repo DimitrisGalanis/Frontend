@@ -32,10 +32,10 @@ function Abc() {
         <img
           src={posts[0].img}
           alt=""
-          className="w-full h-80 md:h-80 xl:h-82 rounded-none lg:rounded-3xl"
+          className="w-full h-72 md:h-80 xl:h-82 rounded-none lg:rounded-3xl"
         />
 
-        <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2">
+        <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700">
           {posts[0].title}
         </div>
 
@@ -43,7 +43,7 @@ function Abc() {
           <div className="flex sm:hidden text-red-700 font-medium"> Europe</div>
           {/* <div className="italic pl-2">12.10.2022 2.23 PM GMT+3 </div> */}
         </div>
-        <div className="pl-2 pr-2 sm:pl-2 pt-3 text-lg font-serif text-gray-700">
+        <div className="pr-2 pt-3 text-lg font-serif text-gray-700">
           {posts[0].description}
         </div>
       </div>
