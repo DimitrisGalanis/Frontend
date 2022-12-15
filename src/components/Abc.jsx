@@ -32,7 +32,7 @@ function Abc() {
         <img
           src={posts[0].img}
           alt=""
-          className="w-full h-72 md:h-80 xl:h-82 rounded-none lg:rounded-3xl"
+          className="w-full h-72 md:h-80 xl:h-81 rounded-none lg:rounded-3xl"
         />
 
         <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-semibold lg:font-bold text-gray-700 pl-2 lg:pl-0">
