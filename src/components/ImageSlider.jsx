@@ -25,16 +25,18 @@ const ImageSlider = ({ slides }) => {
   const [index, setIndex] = useState(0);
   return (
     <>
-      <div className="container mx-auto max-w-8xl position relative pt-3">
-        <img
-          src={slides[index].url}
-          className="h-80 w-full md:h-81 2xl:h-92 object-cover"
-          alt=""
-        />
+      <div className="container mx-auto position relative pt-3 px-0 md:px-3">
+        <div className="relative">
+          <img
+            src={slides[index].url}
+            className="h-80 w-full md:h-81 2xl:h-92 object-cover"
+            alt=""
+          />
+        </div>
 
         <button
           onClick={(e) => previousSlide(e, index, setIndex)}
-          className=" absolute bottom-1/3 pl-1"
+          className=" absolute bottom-1/2 pl-1"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +55,7 @@ const ImageSlider = ({ slides }) => {
         </button>
         <button
           onClick={(e) => nextSlide(e, index, setIndex)}
-          className="absolute bottom-1/3 right-1 pr-1"
+          className="absolute bottom-1/2 right-1 pr-3"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,37 +72,38 @@ const ImageSlider = ({ slides }) => {
             />
           </svg>
         </button>
+
+        <div className="container mx-auto bg-gray-200/70 md:px-2 px-0">
+          <div className="text-center text-red-700 font-medium text-xl flex justify-center space-x-3 pt-1">
+            Καιρός
+          </div>
+          {/* <div className="">{index}</div>
+        <div className="">{slides[index].title}</div> */}
+          <div className="text-center font-medium text-2xl px-3 pt-2 md:text-3xl  xl:text-3xl pb-5">
+            «Πάμε προς Πασχούγεννα»: Η αισιόδοξη πρόγνωση Μαρουσάκη για τον
+            καιρό στις γιορτές.
+          </div>
+          <div className="flex justify-start text-gray-500/90 font-medium">
+            <div className="pl-3 pr-5">10.12.2022</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 -2 27 27"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <div className="pl-1">15:45</div>
+          </div>
+        </div>
       </div>
 
-      <div className="pt-1 container mx-auto bg-gray-200/70 max-w-8xl">
-        <div className="text-center text-red-700 font-medium text-xl flex justify-center space-x-3 pt-1">
-          Καιρός
-        </div>
-        {/* <div className="">{index}</div>
-          <div className="">{slides[index].title}</div> */}
-        <div className="text-center font-medium text-2xl px-3 pt-2 sm:text-3xl 2xl:text-4xl pb-6">
-          «Πάμε προς Πασχούγεννα»: Η αισιόδοξη πρόγνωση Μαρουσάκη για τον καιρό
-          στις γιορτές.
-        </div>
-        <div className="flex justify-start text-gray-500/90 font-medium">
-          <div className="pl-3 pr-5">10.12.2022</div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 -2 27 27"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          <div className="pl-1">15:45</div>
-        </div>
-      </div>
       <div className="border-b border-neutral-400"></div>
     </>
   );

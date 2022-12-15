@@ -26,24 +26,24 @@ const posts = [
 
 function Abc() {
   return (
-    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5">
+    <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5 md:px-3 px-0">
       {/* left part */}
       <div className="border-b border-neutral-400">
         <img
           src={posts[0].img}
           alt=""
-          className="w-full h-80 md:h-80 xl:h-82 rounded-none sm:rounded-3xl"
+          className="w-full h-80 md:h-80 xl:h-82 rounded-none lg:rounded-3xl"
         />
 
-        <div className="text-3xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2">
+        <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-bold text-gray-700 pl-2">
           {posts[0].title}
         </div>
 
         <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
           <div className="flex sm:hidden text-red-700 font-medium"> Europe</div>
-          <div className="italic pl-2">12.10.2022 2.23 PM GMT+3 </div>
+          {/* <div className="italic pl-2">12.10.2022 2.23 PM GMT+3 </div> */}
         </div>
-        <div className="pl-2 pr-2 sm:pl-2 pt-3 text-xl font-serif text-gray-700">
+        <div className="pl-2 pr-2 sm:pl-2 pt-3 text-lg font-serif text-gray-700">
           {posts[0].description}
         </div>
       </div>
@@ -55,9 +55,9 @@ function Abc() {
           <img
             src={posts[1].img}
             alt=""
-            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 md:h-80 lg:h-56 rounded-none lg:rounded-3xl object-cover"
           />
-          <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
+          <div className="text-2xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 lg:text-xl xl:text-2xl">
             {posts[1].title}
           </div>
           <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
@@ -73,9 +73,9 @@ function Abc() {
           <img
             src={posts[2].img}
             alt=""
-            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 md:h-80 lg:h-56  rounded-none lg:rounded-3xl object-cover"
           />
-          <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
+          <div className="text-2xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 lg:text-xl xl:text-2xl">
             {posts[2].title}
           </div>
           <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
@@ -91,9 +91,9 @@ function Abc() {
           <img
             src={posts[0].img}
             alt=""
-            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 md:h-80 lg:h-56 rounded-none lg:rounded-3xl object-cover"
           />
-          <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
+          <div className="text-2xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 lg:text-xl xl:text-2xl">
             {posts[0].title}
           </div>
           <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">
@@ -110,9 +110,9 @@ function Abc() {
           <img
             src={posts[1].img}
             alt=""
-            className="w-screen h-72 lg:h-60 md:h-81 rounded-none sm:rounded-3xl object-cover"
+            className="w-screen h-72 md:h-80 lg:h-56 rounded-none lg:rounded-3xl object-cover"
           />
-          <div className="text-3xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 sm:text-2xl">
+          <div className="text-2xl pt-2 font-semibold text-gray-700 pl-2 sm:pl-0 lg:text-xl xl:text-2xl">
             {posts[1].title}
           </div>
           <div className="pt-1 text-neutral-500 px-2 sm:px-0 font-normal text-sm sm:text-base sm:pt-4 flex justify-between">

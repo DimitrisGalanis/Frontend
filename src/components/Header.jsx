@@ -13,7 +13,7 @@ function Header() {
   return (
     <>
       <header className="border-b border-neutral-400">
-        <div className="container mx-auto max-w-8xl flex justify-between">
+        <div className="container mx-auto max-w-8xl flex justify-between md:px-3 px-0">
           {/* Logo & Text */}
 
           <Link to="/">
