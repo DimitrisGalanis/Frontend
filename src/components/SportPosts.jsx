@@ -17,7 +17,7 @@ function SportPosts() {
         </div>
 
         {/* {title} */}
-        <div className=" text-start  md:text-center font-medium text-2xl pt-2 pl-2 lg:pl-1 sm:text-2xl 2xl:text-3xl pb-6 text-white">
+        <div className=" text-start font-medium text-2xl pt-2 pl-2 lg:pl-1 sm:text-2xl 2xl:text-3xl pb-6 text-white">
           Παννελλήνιο πρωτάθλημα στίβου ανδρών.
         </div>
         <div className="flex justify-start text-white font-medium">
@@ -47,7 +47,7 @@ function SportPosts() {
             src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="w"
           />
-          <span className="bg-white text-red-600 absolute bottom-0 right-0 font-semibold px-2">
+          <span className="bg-white text-red-600 absolute bottom-0 left-0 font-semibold px-2">
             Αθλήματα
           </span>
         </div>
