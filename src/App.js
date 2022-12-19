@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./helper/ScrollToTop";
 import Athlitismos from "./pages/Athlitismos";
+import Write from "./pages/Write";
 
 const Layout = () => {
   return (
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/Signup",
         element: <Signup />,
+      },
+      {
+        path: "/write",
+        element: <Write />,
       },
     ],
   },
