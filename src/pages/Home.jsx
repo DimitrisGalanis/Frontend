@@ -8,6 +8,7 @@ import ImageSlider from "../components/ImageSlider.jsx";
 import Abc from "../components/Abc";
 import SportPosts from "../components/SportPosts";
 import axios from "axios";
+import Third from "../components/Third";
 
 const slides = [
   {
@@ -43,7 +44,7 @@ function Home() {
   return (
     <div className="bg-gray-50 pt-2 shadow-md">
       <div className="container mx-auto pl-3">
-        <span className="text-gray-800 text-xl border-l-2 pl-2 border-red-600 md:text-2xl font-medium">
+        <span className="text-gray-800 text-xl border-l-2 pl-2 border-red-600 md:text-3xl font-medium">
           Latest News {posts[0]?.id}
         </span>
       </div>
@@ -67,21 +68,27 @@ function Home() {
 
       <ImageSlider slides={slides} />
 
-      <div className="container mx-auto pl-3 py-4">
-        <span className="text-gray-800 text-xl border-l-2 pl-3 border-red-600 md:text-2xl font-medium">
+      <div className="container mx-auto pl-3 py-7">
+        <span className="text-gray-800 text-xl border-l-2 pl-3 border-red-600 md:text-3xl font-medium">
           Most Read
         </span>
       </div>
 
       <SportPosts />
 
-      <div className="container mx-auto pl-3 py-4">
-        <span className="text-gray-800 text-xl border-l-2 pl-3 border-red-600 md:text-2xl font-medium">
+      <div className="container mx-auto pl-3 py-7">
+        <span className="text-gray-800 text-xl border-l-2 pl-3 border-red-600 md:text-3xl font-medium">
           Weather
         </span>
       </div>
-
       <Abc />
+
+      <div className="container mx-auto pl-3 py-7">
+        <span className="text-gray-800 text-xl border-l-2 pl-3 border-red-600 md:text-3xl font-medium">
+          World
+        </span>
+      </div>
+      <Third />
     </div>
   );
 }

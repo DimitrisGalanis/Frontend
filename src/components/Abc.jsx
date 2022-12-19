@@ -28,13 +28,12 @@ function Abc() {
   return (
     <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 pb-5 px-0  md:px-3 space-x-0 lg:space-x-3">
       {/* left part */}
-      <div className="border-b border-neutral-400 mr-2 ">
+      <div className="border-b border-neutral-400 mr-2">
         <img
           src={posts[0].img}
           alt=""
-          className="w-full h-72 md:h-80 xl:h-81 rounded-none lg:rounded-3xl"
+          className="w-full h-72 md:h-80 xl:h-81 rounded-none"
         />
-
         <div className="text-2xl sm:text-3xl 2xl:text-4xl pt-5 font-semibold lg:font-bold text-gray-700 pl-2 lg:pl-0">
           {posts[0].title}
         </div>
