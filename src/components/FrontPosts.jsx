@@ -2,7 +2,7 @@ import React from "react";
 
 function FrontPosts() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-2 py-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 py-10">
       <div className="relative">
         <img
           src="https://images.unsplash.com/photo-1609057339730-79faac0a5e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80"
@@ -38,7 +38,7 @@ function FrontPosts() {
       </div>
 
       <div>
-        <div className="relative">
+        <div className="relative pt-2 lg:pt-0">
           <img
             src="https://www.fosonline.gr/media/news/2022/12/20/222719/main/MessiMbappe.jpg"
             alt="2nd fontpage"
@@ -72,12 +72,12 @@ function FrontPosts() {
           </h3>
         </div>
 
-        <div className="flex space-x-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 space-x-0 lg:space-x-2">
           <div className="relative">
             <img
               src="https://images.pexels.com/photos/1353065/pexels-photo-1353065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="rolex"
-              className="h-72 object-cover"
+              className="h-72 object-cover w-full"
             />
             <div className="absolute bottom-1/3 left-6 font-bold bg-rose-500 px-2 py-0.5">
               <span className="text-white">Business</span>
@@ -106,11 +106,11 @@ function FrontPosts() {
             </h3>
           </div>
 
-          <div className="relative">
+          <div className="relative pt-2 lg:pt-0">
             <img
               src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
-              className="h-72 object-cover"
+              className="h-72 object-cover w-full"
             />
             <div className="absolute bottom-1/3 left-6 font-bold bg-rose-500 px-2 py-0.5">
               <span className="text-white">Business</span>
