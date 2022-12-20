@@ -1,7 +1,8 @@
 import React from "react";
+import FrontPosts from "../components/FrontPosts";
 
 function Texnologia() {
-  return <div>Texnologia</div>;
+  return <FrontPosts />;
 }
 
 export default Texnologia;
