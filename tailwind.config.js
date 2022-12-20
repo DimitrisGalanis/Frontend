@@ -20,6 +20,9 @@ module.exports = {
         Abc: ["Roboto", "sans-serif"],
         Ab: ["Open Sans", "sans-serif"],
       },
+      backgroundImage: {
+        grid: "url('./images/grid.png')",
+      },
     },
   },
   plugins: [],
