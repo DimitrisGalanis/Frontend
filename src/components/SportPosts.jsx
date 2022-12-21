@@ -3,11 +3,11 @@ import React from "react";
 function SportPosts() {
   return (
     <>
-      <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-5 md:px-3 px-0">
+      <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-3 md:px-3 px-0">
         <div className="bg-black">
           <div className="relative">
             <img
-              className="h-72 md:h-80 xl:h-81 w-screen"
+              className="h-72 md:h-80 xl:h-81 w-screen "
               src="https://images.pexels.com/photos/34514/spot-runs-start-la.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
             />

@@ -2,23 +2,23 @@ import React from "react";
 
 function FrontPosts() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 py-10">
-      <div className="relative">
+    <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 px-0 md:px-3">
+      <div className="relative pr-1">
         <img
           src="https://images.unsplash.com/photo-1609057339730-79faac0a5e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80"
           alt="frontpost"
-          className="h-96 w-full object-cover "
+          className=" h-80  lg:h-96 w-full object-cover "
         />
-        <div className="absolute bottom-1/4 left-6 font-bold bg-rose-500 px-2 py-0.5">
+        <div className="absolute bottom-1/2 xl:bottom-1/3 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
           <span className="text-white">Social Media</span>
         </div>
 
-        <h3 className="absolute top-3/4 pt-8 left-6 text-white font-semibold text-xl">
+        <h3 className="absolute bottom-1/4  xl:top-3/4 left-3 xl:left-6 text-white font-semibold text-xl">
           {" "}
           Twitter, άρση απαγόρευσης αναρτήσεων σε άλλα social media.
         </h3>
 
-        <h3 className="absolute bottom-0 left-6 pb-4 text-white font-semibold">
+        <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 inline mr-2 text-rose-500"
@@ -44,16 +44,17 @@ function FrontPosts() {
             alt="2nd fontpage"
             className="h-75 w-full object-cover pb-2"
           />
-          <div className="absolute bottom-1/3 left-6 font-bold bg-rose-500 px-2 py-0.5">
+
+          <div className="absolute bottom-1/2 xl:bottom-1/3 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
             <span className="text-white">Mundial</span>
           </div>
 
-          <h3 className="absolute bottom-0 left-6 pb-14 text-white font-semibold text-xl">
+          <h3 className="absolute bottom-14 left-3 xl:left-6 text-white font-semibold text-xl">
             {" "}
-            Γάλλοι στους δρόμους για τον πορεία στο Μουντιάλ.
+            Μουντιάλ 2022, η Αργεντινή και η Γαλλία στον τελικό.
           </h3>
 
-          <h3 className="absolute bottom-0 left-6 pb-4 text-white font-semibold">
+          <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 inline mr-2 text-rose-500"
@@ -79,15 +80,15 @@ function FrontPosts() {
               alt="rolex"
               className="h-72 object-cover w-full"
             />
-            <div className="absolute bottom-1/3 left-6 font-bold bg-rose-500 px-2 py-0.5">
+            <div className="absolute bottom-1/3 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
               <span className="text-white">Business</span>
             </div>
-            <h3 className="absolute bottom-0 left-6 pb-14 text-white font-semibold text-xl">
+            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-14 text-white font-semibold text-xl">
               {" "}
               Τιμή Rolex, καινούργια σειρά.
             </h3>
 
-            <h3 className="absolute bottom-0 left-6 pb-4 text-white font-semibold">
+            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 inline mr-2 text-rose-500"
@@ -112,15 +113,15 @@ function FrontPosts() {
               alt=""
               className="h-72 object-cover w-full"
             />
-            <div className="absolute bottom-1/3 left-6 font-bold bg-rose-500 px-2 py-0.5">
+            <div className="absolute bottom-1/3 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
               <span className="text-white">Business</span>
             </div>
-            <h3 className="absolute bottom-0 left-6 pb-14 text-white font-semibold text-xl">
+            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-14 text-white font-semibold text-xl">
               {" "}
               Πτώση κρυπτονομισμάτων.
             </h3>
 
-            <h3 className="absolute bottom-0 left-6 pb-4 text-white font-semibold">
+            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 inline mr-2 text-rose-500"

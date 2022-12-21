@@ -6,7 +6,7 @@ function Third() {
       <div className="bg-black relative">
         <div className="relative">
           <img
-            className="h-72 md:h-80 xl:h-80 w-screen"
+            className="h-72 xl:h-80 w-screen"
             src="https://images.unsplash.com/photo-1529179307417-ca83d48bd790?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
             alt=""
           />
@@ -40,7 +40,7 @@ function Third() {
         </div>
       </div>
 
-      <div className="bg-black mt-4 lg:mt-0 relative">
+      <div className="bg-black mt-3 lg:mt-0 relative">
         <div className="relative">
           <img
             className="h-72 md:h-80 xl:h-80 w-screen"
@@ -77,7 +77,7 @@ function Third() {
         </div>
       </div>
 
-      <div className=" 2xl:mt-0 bg-black relative ">
+      <div className=" 2xl:mt-0 bg-black relative mt-3 lg:mt-0">
         <div className="relative">
           <img
             className="h-72 md:h-80 xl:h-80 w-screen"

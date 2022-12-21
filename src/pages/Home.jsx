@@ -5,7 +5,9 @@ import sea from "../images/sea.jpg";
 import mountain from "../images/mountain.jpg";
 import football from "../images/football.jpg";
 import ImageSlider from "../components/ImageSlider.jsx";
+import FrontPosts from "../components/FrontPosts";
 import Abc from "../components/Abc";
+import Second from "../components/Second";
 import SportPosts from "../components/SportPosts";
 import axios from "axios";
 import Third from "../components/Third";
@@ -45,11 +47,11 @@ function Home() {
   return (
     <div className="bg-gray-50 pt-2 shadow-md">
       <Splitter text={"Latest News" + posts[0]?.id} />
-      <ImageSlider slides={slides} />
+      <FrontPosts />
       <Splitter text="Δημοφιλή" />
       <SportPosts />
       <Splitter text=" Καιρός" />
-      <Abc />
+      <Second />
       <Splitter text="Μετακίνηση" />
       <Third />
     </div>

@@ -1,8 +1,12 @@
 import React from "react";
-import FrontPosts from "../components/FrontPosts";
+import Second from "../components/Second";
 
 function Texnologia() {
-  return <FrontPosts />;
+  return (
+    <>
+      <Second />
+    </>
+  );
 }
 
 export default Texnologia;
