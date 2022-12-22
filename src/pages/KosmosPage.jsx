@@ -1,7 +1,7 @@
 import React from "react";
 import Second from "../components/Second";
 
-function Texnologia() {
+function Kosmos() {
   return (
     <>
       <Second />
@@ -9,4 +9,4 @@ function Texnologia() {
   );
 }
 
-export default Texnologia;
+export default Kosmos;

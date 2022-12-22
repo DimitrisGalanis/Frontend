@@ -31,12 +31,11 @@ function Header() {
           </Link>
 
           <div className="hidden md:inline-flex items-center space-x-6 text-lg font-medium">
-            <h3>
-              <Link to="/texnologia">World</Link>
-            </h3>
-            <h3>Business</h3>
-            <h3>Politics</h3>
-            <h3>Sports</h3>
+            <Link to="/kosmos">Κόσμος</Link>
+
+            <Link to="/oikonomia">Οικονομία</Link>
+            <Link to="/politiki">Πολιτική</Link>
+            <Link to="/sports">Sports</Link>
           </div>
           <div className="flex items-center gap-x-3">
             {isAboveSmallScreens ? (

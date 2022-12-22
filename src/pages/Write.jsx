@@ -11,7 +11,7 @@ function Write() {
         <input
           type="text"
           placeholder="Τίτλος Άρθρου"
-          className="px-3 py-1 text-xl font-bold text-black border border-black placeholder:text-gray-400 placeholder:font-normal"
+          className="px-3 py-1 text-xl font-bold text-black border border-neutral-500 placeholder:text-gray-400 placeholder:font-normal"
         />
         <ReactQuill
           theme="snow"

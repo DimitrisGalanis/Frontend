@@ -3,15 +3,14 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
-import Koinonia from "./pages/Koinonia";
-import Oikonomia from "./pages/Oikonomia";
-import Diethni from "./pages/Diethni";
-import Texnologia from "./pages/Texnologia";
+import OikonomiaPage from "./pages/OikonomiaPage";
+import PoliticsPage from "./pages/PoliticsPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./helper/ScrollToTop";
-import Athlitismos from "./pages/Athlitismos";
+import SportPage from "./pages/SportPage";
 import Write from "./pages/Write";
+import KosmosPage from "./pages/KosmosPage";
 
 const Layout = () => {
   return (
@@ -38,28 +37,23 @@ const router = createBrowserRouter([
       },
       {
         //Todo fix it
-        path: "/ellada",
-        element: <Koinonia />,
-      },
-      {
-        //Todo fix it
-        path: "/diethni",
-        element: <Diethni />,
-      },
-      {
-        //Todo fix it
-        path: "/athlitismos",
-        element: <Athlitismos />,
-      },
-      {
-        //Todo fix it
-        path: "/texnologia",
-        element: <Texnologia />,
+        path: "/kosmos",
+        element: <KosmosPage />,
       },
       {
         //Todo fix it
         path: "/oikonomia",
-        element: <Oikonomia />,
+        element: <OikonomiaPage />,
+      },
+      {
+        //Todo fix it
+        path: "/politiki",
+        element: <PoliticsPage />,
+      },
+      {
+        //Todo fix it
+        path: "/sports",
+        element: <SportPage />,
       },
       {
         path: "/Login",
