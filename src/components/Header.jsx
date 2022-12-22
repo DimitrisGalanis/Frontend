@@ -5,8 +5,11 @@ import useMediaQuery from "../helper/useMediaQuery.jsx";
 import { useState } from "react";
 import Menu from "../helper/Menu.jsx";
 import SearchText from "../helper/SearchText";
+import { AuthContext } from "../context/authContext";
+import { useContext } from "react";
 
 function Header() {
+  const { currentUser } = useContext(AuthContext);
   const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(true);
@@ -36,6 +39,7 @@ function Header() {
             <Link to="/oikonomia">Οικονομία</Link>
             <Link to="/politiki">Πολιτική</Link>
             <Link to="/sports">Sports</Link>
+            <span>{currentUser?.username}</span>
           </div>
           <div className="flex items-center gap-x-3">
             {isAboveSmallScreens ? (

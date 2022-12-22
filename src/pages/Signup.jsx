@@ -1,7 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 
 function Signup() {
+  const [input, setInput] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:8800/api/auth/register", input).then(
+      (response) => {
+        navigate("/login");
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+
+  const navigate = useNavigate();
+
   return (
     <div className="main flex min-h-full overflow-hidden pt-10 sm:py-28 ">
       <div className="mx-auto flex w-full max-w-2xl flex-col px-4 sm:px-6">
@@ -25,13 +51,15 @@ function Signup() {
               {/* First name  */}
               <div>
                 <label
-                  htmlFor="First Name"
+                  htmlFor="Username"
                   className="mb-2 block text-sm font-semibold text-gray-900"
                 >
-                  First Name
+                  Username
                 </label>
                 <input
-                  id="first name"
+                  name="username"
+                  onChange={handleChange}
+                  id="Username"
                   type="text"
                   autoComplete="given-name"
                   required
@@ -67,6 +95,8 @@ function Signup() {
                 </label>
 
                 <input
+                  name="email"
+                  onChange={handleChange}
                   id="email"
                   autoComplete="email"
                   required
@@ -83,6 +113,8 @@ function Signup() {
                   Password
                 </label>
                 <input
+                  name="password"
+                  onChange={handleChange}
                   type="password"
                   id="passsowrd"
                   autoComplete="new-password"
@@ -113,6 +145,7 @@ function Signup() {
           </form>
 
           <button
+            onClick={handleSubmit}
             className="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 
             outline-offset-2 transition-colors relative overflow-hidden bg-cyan-800 text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-cyan-600 active:text-white/80 before:transition-colors mt-8 w-full"
           >
