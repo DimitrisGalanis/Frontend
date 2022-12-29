@@ -46,8 +46,8 @@ function Home() {
 
   return (
     <div className="bg-gray-50 pt-2 shadow-md">
-      <Splitter text={"Latest News" + posts[0]?.id} />
-      <FrontPosts />
+      <Splitter text="Latest News" />
+      <FrontPosts posts={posts} />
       <Splitter text="Δημοφιλή" />
       <SportPosts />
       <Splitter text=" Καιρός" />

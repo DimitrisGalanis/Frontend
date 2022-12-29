@@ -9,7 +9,7 @@ import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 
 function Header() {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, logout } = useContext(AuthContext);
   const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(true);
@@ -39,7 +39,6 @@ function Header() {
             <Link to="/oikonomia">Οικονομία</Link>
             <Link to="/politiki">Πολιτική</Link>
             <Link to="/sports">Sports</Link>
-            <span>{currentUser?.username}</span>
           </div>
           <div className="flex items-center gap-x-3">
             {isAboveSmallScreens ? (
@@ -127,6 +126,13 @@ function Header() {
                 </svg>
               )}
             </button>
+            {currentUser && (
+              <button onClick={logout}>
+                <span className="bg-red-400">
+                  {currentUser?.username} Logout
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </header>

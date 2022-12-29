@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function FrontPosts() {
+function FrontPosts({ posts }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 px-0 md:px-3">
-      <div className="relative pr-1">
+      <Link to={`/posts/${posts[0]?.id}`} className="relative pr-1">
         <img
-          src="https://images.unsplash.com/photo-1609057339730-79faac0a5e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80"
+          src={posts[0]?.img}
           alt="frontpost"
           className=" h-80  lg:h-96 w-full object-cover "
         />
@@ -15,7 +16,7 @@ function FrontPosts() {
 
         <h3 className="absolute bottom-1/4  xl:top-3/4 left-3 xl:left-6 text-white font-semibold text-xl">
           {" "}
-          Twitter, άρση απαγόρευσης αναρτήσεων σε άλλα social media.
+          {posts[0]?.title}
         </h3>
 
         <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
@@ -33,14 +34,14 @@ function FrontPosts() {
               d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
             />
           </svg>
-          05 Dec - 2022
+          {posts[0]?.date}
         </h3>
-      </div>
+      </Link>
 
       <div>
-        <div className="relative pt-2 lg:pt-0">
+        <Link to={`/posts/${posts[1]?.id}`} className="relative pt-2 lg:pt-0">
           <img
-            src="https://www.fosonline.gr/media/news/2022/12/20/222719/main/MessiMbappe.jpg"
+            src={posts[1]?.img}
             alt="2nd fontpage"
             className="h-75 w-full object-cover pb-2"
           />
@@ -50,8 +51,7 @@ function FrontPosts() {
           </div>
 
           <h3 className="absolute bottom-14 left-3 xl:left-6 text-white font-semibold text-xl">
-            {" "}
-            Μουντιάλ 2022, η Αργεντινή και η Γαλλία στον τελικό.
+            {posts[1]?.title}
           </h3>
 
           <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
@@ -69,9 +69,9 @@ function FrontPosts() {
                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
               />
             </svg>
-            05 Dec - 2022
+            {posts[1]?.date}
           </h3>
-        </div>
+        </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 space-x-0 lg:space-x-2">
           <div className="relative">
