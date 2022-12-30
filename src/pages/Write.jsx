@@ -27,6 +27,7 @@ function Write() {
         cat,
         img: "empty",
         uid: currentUser.id,
+        username: currentUser.username,
       })
       .then(
         (response) => {

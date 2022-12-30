@@ -11,6 +11,7 @@ import ScrollToTop from "./helper/ScrollToTop";
 import SportPage from "./pages/SportPage";
 import Write from "./pages/Write";
 import KosmosPage from "./pages/KosmosPage";
+import Dashboard from "./pages/Dashboard";
 
 const Layout = () => {
   return (
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/write",
         element: <Write />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
     ],
   },

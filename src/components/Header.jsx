@@ -5,11 +5,8 @@ import useMediaQuery from "../helper/useMediaQuery.jsx";
 import { useState } from "react";
 import Menu from "../helper/Menu.jsx";
 import SearchText from "../helper/SearchText";
-import { AuthContext } from "../context/authContext";
-import { useContext } from "react";
 
 function Header() {
-  const { currentUser, logout } = useContext(AuthContext);
   const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(true);
@@ -126,13 +123,6 @@ function Header() {
                 </svg>
               )}
             </button>
-            {currentUser && (
-              <button onClick={logout}>
-                <span className="bg-red-400">
-                  {currentUser?.username} Logout
-                </span>
-              </button>
-            )}
           </div>
         </div>
       </header>
