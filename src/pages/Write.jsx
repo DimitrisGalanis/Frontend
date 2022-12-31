@@ -37,7 +37,7 @@ function Write() {
           console.log(error);
         }
       );
-    console.log(value);
+    navigate("/dashboard");
   };
 
   const navigate = useNavigate();
