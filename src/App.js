@@ -12,6 +12,7 @@ import SportPage from "./pages/SportPage";
 import Write from "./pages/Write";
 import KosmosPage from "./pages/KosmosPage";
 import Dashboard from "./pages/Dashboard";
+import EditPage from "./pages/EditPage";
 
 const Layout = () => {
   return (
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/write",
         element: <Write />,
+      },
+      {
+        path: "/edit/:id",
+        element: <EditPage />,
       },
       {
         path: "/dashboard",

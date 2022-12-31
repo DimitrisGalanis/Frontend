@@ -1,13 +1,30 @@
 import React from "react";
 import ReactQuill from "react-quill";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "react-quill/dist/quill.snow.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 
-function Write() {
+function EditPage() {
+  const [post, setPost] = useState([]);
+  const id = window.location.pathname.split("/")[2];
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`http://localhost:8800/api/posts/${id}`);
+        setPost(res.data);
+        setValue(res.data.description);
+        setTitle(res.data.title);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   const { currentUser } = useContext(AuthContext);
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
@@ -16,14 +33,10 @@ function Write() {
   const [tag, setTag] = useState("");
   const [date, setDate] = useState("");
 
-  // const handleChange = (e) => {
-  //   setPost((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8800/api/posts", {
+      .put("http://localhost:8800/api/posts", {
         title,
         description: value,
         img: img,
@@ -32,6 +45,7 @@ function Write() {
         date: date,
         uid: currentUser.id,
         username: currentUser.username,
+        id: id,
       })
       .then(
         (response) => {
@@ -49,6 +63,7 @@ function Write() {
     <div className=" container mx-auto max-w-8xl px-2 mt-10 flex-row justify-between pb-20">
       <div className="content">
         <input
+          defaultValue={post.title}
           onChange={(e) => setTitle(e.target.value)}
           name="title"
           type="text"
@@ -113,7 +128,7 @@ function Write() {
             className="bg-cyan-800 text-white px-1 py-0.5"
           >
             {" "}
-            Create New Post
+            UPDATE THE POST
           </button>
         </div>
       </div>
@@ -121,4 +136,4 @@ function Write() {
   );
 }
 
-export default Write;
+export default EditPage;

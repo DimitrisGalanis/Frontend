@@ -16,6 +16,10 @@ function Dashboard() {
     navigate("/login");
   };
 
+  function handleEdit(e, id) {
+    navigate(`/edit/${id}`);
+  }
+
   function handleDelete(e, id) {
     e.preventDefault();
     axios
@@ -148,12 +152,18 @@ function Dashboard() {
               <div className="w-52 pl-10">{post.date}</div>
               <div className="w-40">{post.username}</div>
               {currentUser.username === post.username && (
-                <img src={edit} className="w-40 h-7 object-contain pr-32" />
+                <img
+                  alt="edit icon"
+                  src={edit}
+                  className="w-40 h-7 object-contain pr-32 hover:cursor-pointer"
+                  onClick={(e) => handleEdit(e, post.id)}
+                />
               )}
               {currentUser.username === post.username && (
                 <img
+                  alt="delete icon"
                   src={deleteIcon}
-                  className="pl-3 h-7 object-contain"
+                  className="pl-3 h-7 object-contain hover:cursor-pointer"
                   onClick={(e) => handleDelete(e, post.id)}
                 />
               )}
