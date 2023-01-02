@@ -1,9 +1,10 @@
 import React from "react";
+import Comment from "../components/Comments.jsx";
 
 function OikonomiaPage() {
   return (
     <>
-      <h1>OikonomiaPage</h1>
+      <Comment />
     </>
   );
 }

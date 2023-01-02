@@ -1,8 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Comment from "../components/Comments.jsx";
+import Roh from "../components/Roh.jsx";
 
-function Post() {
+function createMarkup(text) {
+  return { __html: text };
+}
+
+const Post = () => {
   const [post, setPost] = useState([]);
   const id = window.location.pathname.split("/")[2];
 
@@ -19,7 +25,20 @@ function Post() {
     fetchData();
   }, []);
 
-  return <div>{post?.title}</div>;
-}
+  return (
+    <div className="flex container mx-auto px-0 lg:px-3 pt-14 pb-7">
+      <div className="post">
+        <div className="text-4xl font-bold pb-7 text-black/90">
+          {post?.title}
+        </div>
+        <img src={post?.img} className="w-full h-82 mb-10" alt="" />
+        <div dangerouslySetInnerHTML={createMarkup(post?.description)} />
+        <Comment />
+      </div>
+
+      <Roh />
+    </div>
+  );
+};
 
 export default Post;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Comments() {
+const Comments = () => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 container mx-auto max-w-8xl">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
@@ -8,8 +8,6 @@ function Comments() {
       </h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea
-          value={""}
-          onChange={""}
           className="p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
           name="comment"
           placeholder="Comment"
@@ -33,24 +31,8 @@ function Comments() {
           name="email"
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 mb-4">
-        <div>
-          <input
-            checked="{formData.storeData}"
-            onChange="{onInputChange}"
-            type="checkbox"
-            id="storeData"
-            name="storeData"
-            value="true"
-          />
-          <label className="text-gray-500 cursor-pointer" htmlFor="storeData">
-            {" "}
-            Save my name, email in this browser for the next time I comment.
-          </label>
-        </div>
-      </div>
 
-      <p className="text-xs text-red-500">All fields are mandatory</p>
+      <p className="text-xs text-red-500">All fields are mandatory ?</p>
 
       <div className="mt-8">
         <button
@@ -67,6 +49,6 @@ function Comments() {
       </div>
     </div>
   );
-}
+};
 
 export default Comments;

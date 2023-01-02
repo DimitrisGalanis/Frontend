@@ -18,6 +18,7 @@ function EditPage() {
         setPost(res.data);
         setValue(res.data.description);
         setTitle(res.data.title);
+        setImg(res.data.img);
       } catch (err) {
         console.log(err);
       }

@@ -8,13 +8,13 @@ function FrontPosts({ posts }) {
         <img
           src={posts[0]?.img}
           alt="frontpost"
-          className=" h-80  lg:h-96 w-full object-cover "
+          className=" h-80 lg:h-96 w-full object-cover"
         />
         <div className="absolute bottom-1/2 xl:bottom-1/3 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
           <span className="text-white">Social Media</span>
         </div>
 
-        <h3 className="absolute bottom-1/4  xl:top-3/4 left-3 xl:left-6 text-white font-semibold text-xl">
+        <h3 className="absolute bottom-1/4 left-3 xl:left-6 text-white font-semibold text-xl px-1">
           {" "}
           {posts[0]?.title}
         </h3>
@@ -50,7 +50,7 @@ function FrontPosts({ posts }) {
             <span className="text-white">Mundial</span>
           </div>
 
-          <h3 className="absolute bottom-14 left-3 xl:left-6 text-white font-semibold text-xl">
+          <h3 className="absolute px-1 bottom-14 left-3 xl:left-6 text-white font-semibold text-xl backdrop-blur-lg bg-white/20">
             {posts[1]?.title}
           </h3>
 

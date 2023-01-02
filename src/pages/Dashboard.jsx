@@ -16,7 +16,7 @@ function Dashboard() {
     navigate("/login");
   };
 
-  function handleEdit(e, id) {
+  function handleEdit(id) {
     navigate(`/edit/${id}`);
   }
 
@@ -25,7 +25,7 @@ function Dashboard() {
     axios
       .delete(`http://localhost:8800/api/posts/${id}`)
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -156,7 +156,7 @@ function Dashboard() {
                   alt="edit icon"
                   src={edit}
                   className="w-40 h-7 object-contain pr-32 hover:cursor-pointer"
-                  onClick={(e) => handleEdit(e, post.id)}
+                  onClick={(e) => handleEdit(post.id)}
                 />
               )}
               {currentUser.username === post.username && (
