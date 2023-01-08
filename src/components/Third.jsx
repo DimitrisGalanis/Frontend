@@ -1,6 +1,6 @@
 import React from "react";
 
-function Third() {
+const Third = () => {
   return (
     <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-4 md:px-3 px-0">
       <div className="bg-black relative">
@@ -115,6 +115,6 @@ function Third() {
       </div>
     </div>
   );
-}
+};
 
 export default Third;

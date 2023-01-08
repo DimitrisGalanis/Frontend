@@ -1,6 +1,6 @@
 import React from "react";
 
-function SportPosts() {
+const SportPosts = () => {
   return (
     <>
       <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-3 md:px-3 px-0">
@@ -80,6 +80,6 @@ function SportPosts() {
       </div>
     </>
   );
-}
+};
 
 export default SportPosts;

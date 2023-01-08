@@ -1,6 +1,6 @@
 import React from "react";
 
-function Second() {
+const Second = () => {
   return (
     <div className="flex-row lg:flex lg:space-x-5 container mx-auto max-w-8xl md:px-3 px-0">
       <div className=" shadow-md">
@@ -49,6 +49,7 @@ function Second() {
         <img
           src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80"
           className="w-full h-72 object-cover"
+          alt=""
         />
         <div className="text-gray-800 hover:text-gray-600 px-2 pt-1">
           <span className="text-orange-600 hover:text-orange-800 font-semibold">
@@ -65,6 +66,6 @@ function Second() {
       </div>
     </div>
   );
-}
+};
 
 export default Second;

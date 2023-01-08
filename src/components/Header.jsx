@@ -6,7 +6,7 @@ import { useState } from "react";
 import Menu from "../helper/Menu.jsx";
 import SearchText from "../helper/SearchText";
 
-function Header() {
+const Header = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 720px)");
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(true);
@@ -131,6 +131,6 @@ function Header() {
       {isSearchOpen ? <></> : <SearchText />}
     </>
   );
-}
+};
 
 export default Header;

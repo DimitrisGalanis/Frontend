@@ -1,6 +1,6 @@
 import React from "react";
 
-function Splitter({ text }) {
+const Splitter = ({ text }) => {
   return (
     <div className="container mx-auto px-0 lg:px-3 pt-14 pb-7 ">
       <div className="bg-grid">
@@ -10,6 +10,6 @@ function Splitter({ text }) {
       </div>
     </div>
   );
-}
+};
 
 export default Splitter;

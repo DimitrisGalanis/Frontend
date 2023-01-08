@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer() {
+const Footer = () => {
   return (
     <div className=" flex flex-col pt-0.25 bg-black/90 p-3 sm:flex-row justify-between">
       <div className="container max-w-8xl mx-auto">
@@ -53,6 +53,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

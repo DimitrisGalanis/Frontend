@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function FrontPosts({ posts }) {
+const FrontPosts = ({ posts }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 px-0 md:px-3">
       <Link to={`/posts/${posts[0]?.id}`} className="relative pr-1">
@@ -143,6 +143,6 @@ function FrontPosts({ posts }) {
       </div>
     </div>
   );
-}
+};
 
 export default FrontPosts;
