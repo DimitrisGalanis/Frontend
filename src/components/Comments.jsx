@@ -1,8 +1,27 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const Comments = () => {
+const Comments = ({ post_id }) => {
+  const [comments, setComments] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:8800/api/comments/${post_id}`
+        );
+        setComments(res.data);
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [post_id]);
+
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 container mx-auto max-w-8xl">
+    <div className="bg-white shadow-lg rounded-lg px-2 pb-12 mb-8 container mx-auto max-w-8xl ">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
         Leave a Reply
       </h3>
