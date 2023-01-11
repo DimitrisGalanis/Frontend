@@ -11,6 +11,7 @@ function createMarkup(text) {
 
 const Post = () => {
   const [post, setPost] = useState([]);
+
   const location = useLocation();
   const id = location.pathname.split("/")[2];
 
