@@ -179,7 +179,11 @@ function Dashboard() {
         Unauthorized Access
       </h1>
       <Link to="/login">
-        <div className="text-center text-5xl py-10">Login</div>
+        <div className=" text-center ">
+          <button class="bg-blue-500 text-white text-xl font-bold py-2 px-4 rounded-lg mb-2">
+            Login
+          </button>
+        </div>
       </Link>
     </div>
   );
