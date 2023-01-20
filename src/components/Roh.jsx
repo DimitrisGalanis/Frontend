@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const roh = [
   {
     img: "https://images.pexels.com/photos/6496689/pexels-photo-6496689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    tilos: "Τιτλος απραραραρα μ ασδδασδσα τι θες ρε φιλε",
+    tilos: "Τιτλος άρθρου #1 ροης",
     id: 1,
   },
   {
-    img: "https://images.pexels.com/photos/6496689/pexels-photo-6496689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    tilos: "Κατι διαφορετικό για την μετακίνηση ασδασδ",
+    img: "https://images.pexels.com/photos/14894649/pexels-photo-14894649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    tilos: "Tιτλος άρθρου #2",
     id: 2,
   },
 ];
@@ -25,7 +25,7 @@ const Roh = () => {
       <ul>
         {roh.map((roh, key) => (
           <div className="flex pb-4" key={roh.id}>
-            <img src={roh.img} className="h-36 w-60 rounded-xl" alt="" />
+            <img src={roh.img} className="h-36 w-36 rounded-xl" alt="" />
             <div className="pl-4">
               <div className=" font-semibold text-lg container">
                 {roh.tilos}
