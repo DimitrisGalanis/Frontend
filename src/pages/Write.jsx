@@ -20,6 +20,27 @@ function Write() {
   //   setPost((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   // };
 
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  const uploadImage = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertBase64(file);
+    setImg(base64);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
@@ -78,20 +99,36 @@ function Write() {
             </label>
           </div>
           <div className="items-center text-cyan-800 font-medium">
-            <input type="radio" name="cat" value="Economy" />
+            <input
+              type="radio"
+              name="cat"
+              value="oikonomia"
+              id="Economy"
+              onChange={(e) => setCat(e.target.value)}
+            />
             <label htmlFor="Οικονομία" className="pl-3">
               Οικονομία
             </label>
           </div>
           <div className="items-center text-cyan-800 font-medium">
-            <input type="radio" name="cat" value="economy" />
+            <input
+              type="radio"
+              name="cat"
+              value="politiki"
+              onChange={(e) => setCat(e.target.value)}
+            />
             <label htmlFor="Πολιτική" className="pl-3">
               Πολιτική
             </label>
           </div>
 
           <div className="items-center text-cyan-800 font-medium">
-            <input type="radio" name="cat" value="Sports" />
+            <input
+              type="radio"
+              name="cat"
+              value="sports"
+              onChange={(e) => setCat(e.target.value)}
+            />
             <label htmlFor="Sports" className="pl-3">
               Sports
             </label>
@@ -100,14 +137,38 @@ function Write() {
 
         <div className="publish border border-neutral-400 px-2">
           <div className="text-2xl font-semibold text-gray-800">Publish</div>
-          <div className=" font-semibold text-xl  text-cyan-800">
+          {/* <div className=" font-semibold text-xl  text-cyan-800">
             Status:{" "}
             <span className="text-neutral-400 text-lg font-normal ">Draft</span>
-          </div>
+          </div> */}
 
           <div className="text-xl font-normal pb-2 text-black">
-            <span className="font-medium text-cyan-800">Upload </span>an image
+            <label htmlFor="img">
+              Upload Image
+              <input
+                id="img"
+                type="file"
+                className="hidden"
+                onChange={uploadImage}
+              />
+              <svg
+                aria-hidden="true"
+                className="w-10 h-10 mb-3 text-gray-400 cursor-pointer pt-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+            </label>
           </div>
+
           <button
             onClick={handleSubmit}
             className="bg-cyan-800 text-white px-1 py-0.5"
