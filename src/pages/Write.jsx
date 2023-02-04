@@ -57,9 +57,11 @@ function Write() {
       .then(
         (response) => {
           console.log(response);
+          alert(response.data);
         },
         (error) => {
           console.log(error);
+          alert(error.response.data);
         }
       );
     navigate("/dashboard");
@@ -135,6 +137,43 @@ function Write() {
           </div>
         </div>
 
+        <div className=" border border-neutral-400 px-2">
+          <div>
+            <label
+              className="block text-2xl font-semibold text-gray-800 pb-2"
+              htmlFor="tag"
+            >
+              Post Tag
+            </label>
+            <input
+              type="text"
+              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
+              id="tag"
+              value={tag}
+              onChange={(e) => setTag(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className=" border border-neutral-400 px-2">
+          <div>
+            <label
+              className="block text-2xl font-semibold text-gray-800 pb-2"
+              htmlFor="date"
+            >
+              Post Date
+            </label>
+            <input
+              placeholder="01 June - 2023"
+              type="text"
+              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
+              id="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </div>
+        </div>
+
         <div className="publish border border-neutral-400 px-2">
           <div className="text-2xl font-semibold text-gray-800">Publish</div>
           {/* <div className=" font-semibold text-xl  text-cyan-800">
@@ -143,30 +182,17 @@ function Write() {
           </div> */}
 
           <div className="text-xl font-normal pb-2 text-black">
-            <label htmlFor="img">
-              Upload Image
-              <input
-                id="img"
-                type="file"
-                className="hidden"
-                onChange={uploadImage}
-              />
-              <svg
-                aria-hidden="true"
-                className="w-10 h-10 mb-3 text-gray-400 cursor-pointer pt-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                ></path>
-              </svg>
-            </label>
+            <input
+              id="img"
+              className=" py-2 block w-full text-sm text-slate-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-violet-50 file:text-cyan-800
+              hover:file:bg-violet-100"
+              type="file"
+              onChange={uploadImage}
+            />
           </div>
 
           <button

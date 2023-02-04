@@ -19,12 +19,15 @@ function EditPage() {
         setValue(res.data.description);
         setTitle(res.data.title);
         setImg(res.data.img);
+        setCat(res.data.category);
+        setTag(res.data.tag);
+        setDate(res.data.date);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const { currentUser } = useContext(AuthContext);
   const [value, setValue] = useState("");
@@ -50,9 +53,11 @@ function EditPage() {
       })
       .then(
         (response) => {
+          alert(response.data);
           console.log(response);
         },
         (error) => {
+          alert(error.data);
           console.log(error);
         }
       );
@@ -111,6 +116,43 @@ function EditPage() {
             <label htmlFor="Sports" className="pl-3">
               Sports
             </label>
+          </div>
+        </div>
+
+        <div className=" border border-neutral-400 px-2">
+          <div>
+            <label
+              className="block text-2xl font-semibold text-gray-800 pb-2"
+              htmlFor="tag"
+            >
+              Post Tag
+            </label>
+            <input
+              defaultValue={tag}
+              type="text"
+              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
+              id="tag"
+              onChange={(e) => setTag(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className=" border border-neutral-400 px-2">
+          <div>
+            <label
+              className="block text-2xl font-semibold text-gray-800 pb-2"
+              htmlFor="date"
+            >
+              Post Date
+            </label>
+            <input
+              defaultValue={date}
+              placeholder="01 June - 2023"
+              type="text"
+              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
+              id="date"
+              onChange={(e) => setDate(e.target.value)}
+            />
           </div>
         </div>
 

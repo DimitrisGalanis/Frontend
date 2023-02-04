@@ -61,6 +61,8 @@ const Header = () => {
                   id="search-navbar"
                   className="w-full p-2 pl-10 text-sm text-gray-900 border border-gray-500 rounded-lg bg-gray-50 focus:outline-black/70 "
                   placeholder="Search..."
+                  // onChange={(e) => setSearchText(e.target.value)}
+                  // value={searchText}
                 />
               </div>
             ) : (
