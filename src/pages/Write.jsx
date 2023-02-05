@@ -63,13 +63,13 @@ function Write() {
         (response) => {
           console.log(response);
           alert(response.data);
+          navigate("/dashboard");
         },
         (error) => {
           console.log(error);
           alert(error.response.data);
         }
       );
-    // navigate("/dashboard");
   };
 
   const navigate = useNavigate();
