@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
+import EditorToolbar, { modules, formats } from "../components/EditorToolbar";
 
 function Write() {
   const { currentUser } = useContext(AuthContext);
@@ -37,8 +38,12 @@ function Write() {
 
   const uploadImage = async (e) => {
     const file = e.target.files[0];
-    const base64 = await convertBase64(file);
-    setImg(base64);
+    if (file.type === "image/jpeg" || file.type === "image/png") {
+      const base64 = await convertBase64(file);
+      setImg(base64);
+    } else {
+      alert("Επιτρέπονται μόνο αρχεία .jpeg ή .png");
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -64,7 +69,7 @@ function Write() {
           alert(error.response.data);
         }
       );
-    navigate("/dashboard");
+    // navigate("/dashboard");
   };
 
   const navigate = useNavigate();
@@ -78,11 +83,14 @@ function Write() {
           placeholder="Τίτλος Άρθρου"
           className="px-3 py-1 text-xl font-bold text-black border border-neutral-500 placeholder:text-gray-400 placeholder:font-normal"
         />
+        <EditorToolbar toolbarId={"t1"} />
         <ReactQuill
           value={value}
           theme="snow"
           onChange={setValue}
           className="h-92 w-full pt-5"
+          modules={modules("t1")}
+          formats={formats}
         />
       </div>
       <div className="menu flex space-x-5 pt-16">
