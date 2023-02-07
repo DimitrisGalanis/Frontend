@@ -35,24 +35,25 @@ const CommentPostForm = ({ postid, comments, setComments }) => {
         <h3 className="text-2xl mb-6 font-semibold border-b pb-4">
           ΠΡΟΣΘΗΚΗ ΣΧΟΛΙΟΥ
         </h3>
-        <div className="grid grid-cols-1 gap-4 mb-4">
-          <label htmlFor="comment" className="">
+        <div className="grid grid-cols-1 gap-1 mb-4">
+          <label htmlFor="comment" className="pl-1">
             {" "}
-            ΣΧΟΛΙΟ
-            <textarea
-              type="text"
-              className="p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
-              name="comment"
-              placeholder="Comment"
-              id="comment"
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-            />
+            ΣΧΟΛΙΟ{" "}
           </label>
+          <textarea
+            type="text"
+            className="p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+            name="comment"
+            placeholder="Comment"
+            id="comment"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+          />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
           <label htmlFor="name" className="">
-            Name:
+            {" "}
+            Name:{" "}
             <input
               type="text"
               value={name}

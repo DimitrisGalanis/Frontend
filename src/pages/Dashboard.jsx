@@ -112,20 +112,26 @@ function Dashboard() {
             <h1 className="pl-3 font-semibold">Posts</h1>
           </div>
 
-          <div className="pt-2 font-semibold">
-            <Link to="/write" className="bg-gray-400 ">
+          <div className="pt-4 font-semibold">
+            <Link
+              to="/write"
+              className=" border-2 border-cyan-700 px-2 py-1 rounded-xl hover:bg-cyan-700 hover:text-white"
+            >
               Create New <span className="text-rose-500">Post</span>
             </Link>
           </div>
-          <div className="font-semibold pt-1">
-            <Link to="/signup" className="bg-gray-400">
+          <div className="font-semibold pt-4">
+            <Link
+              to="/signup"
+              className=" border-2 border-cyan-700 px-2 py-1 rounded-xl hover:bg-cyan-700 hover:text-white"
+            >
               Create New<span className="text-rose-500"> User</span>
             </Link>
           </div>
 
           {currentUser && (
             <button
-              className="rounded-full text-md bg-cyan-500 mt-2 w-24"
+              className="rounded-full text-md bg-cyan-500 mt-7 w-24 py-0.5"
               onClick={handlelogout}
             >
               Logout
@@ -138,9 +144,10 @@ function Dashboard() {
             <div className="w-24">ID</div>
             <div className="w-60">Tittle</div>
             <div className="w-52 pl-10">Created At</div>
-            <div className="w-40">Author</div>
-            <div className="w-40">Edit</div>
-            <div className="w-40">Delete</div>
+            <div className="w-40 ">Author</div>
+            <div className="w-40 ml-14">Category</div>
+            <div className=" w-40">Edit</div>
+            <div className="w-0">Delete</div>
           </div>
           {posts.map((post, key) => (
             <div
@@ -150,12 +157,13 @@ function Dashboard() {
               <div className="w-24">{post.id}</div>
               <div className="w-60">{post.title.slice(0, 25) + ".."}</div>
               <div className="w-52 pl-10">{post.date}</div>
-              <div className="w-40">{post.username}</div>
+              <div className="w-40 mr-14">{post.fullname}</div>
+              <div className="w-40">{post.category}</div>
               {currentUser.username === post.username && (
                 <img
                   alt="edit icon"
                   src={edit}
-                  className="w-40 h-7 object-contain pr-32 hover:cursor-pointer"
+                  className="h-7 object-contain hover:cursor-pointer"
                   onClick={(e) => handleEdit(post.id)}
                 />
               )}
@@ -163,7 +171,7 @@ function Dashboard() {
                 <img
                   alt="delete icon"
                   src={deleteIcon}
-                  className="pl-3 h-7 object-contain hover:cursor-pointer"
+                  className="ml-36 h-7 object-contain hover:cursor-pointer"
                   onClick={(e) => handleDelete(e, post.id)}
                 />
               )}

@@ -6,6 +6,7 @@ import { useState } from "react";
 function Signup() {
   const [input, setInput] = useState({
     username: "",
+    fullname: "",
     email: "",
     password: "",
   });
@@ -18,6 +19,7 @@ function Signup() {
     e.preventDefault();
     axios.post("http://localhost:8800/api/auth/register", input).then(
       (response) => {
+        alert(response);
         navigate("/login");
       },
       (error) => {
@@ -68,19 +70,18 @@ function Signup() {
                 />
               </div>
 
-              {/* Last name  */}
               <div>
                 <label
                   className="mb-2 block text-sm font-semibold text-gray-900"
-                  htmlFor="password"
+                  htmlFor="fullname"
                 >
-                  Last name
+                  Full Name
                 </label>
                 <input
                   type="text"
-                  name="last name"
-                  id="password"
-                  required
+                  name="fullname"
+                  id="fullname"
+                  onChange={handleChange}
                   className="block w-full appearance-none rounded-lg border border-gray-200 bg-white py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-gray-900 placeholder:text-gray-400
                    focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
                 />
@@ -116,7 +117,7 @@ function Signup() {
                   name="password"
                   onChange={handleChange}
                   type="password"
-                  id="passsowrd"
+                  id="password"
                   autoComplete="new-password"
                   required
                   className="block w-full appearance-none rounded-lg border border-gray-200

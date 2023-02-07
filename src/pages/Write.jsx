@@ -16,6 +16,7 @@ function Write() {
   const [img, setImg] = useState("empty");
   const [tag, setTag] = useState("");
   const [date, setDate] = useState("");
+  const [fullname, setFullname] = useState(currentUser.fullname);
 
   // const handleChange = (e) => {
   //   setPost((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -58,6 +59,7 @@ function Write() {
         date: date,
         uid: currentUser.id,
         username: currentUser.username,
+        fullname: fullname,
       })
       .then(
         (response) => {
@@ -151,7 +153,7 @@ function Write() {
               className="block text-2xl font-semibold text-gray-800 pb-2"
               htmlFor="tag"
             >
-              Post Tag
+              Post Keyword
             </label>
             <input
               type="text"
@@ -159,6 +161,24 @@ function Write() {
               id="tag"
               value={tag}
               onChange={(e) => setTag(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className=" border border-neutral-400 px-2">
+          <div>
+            <label
+              className="block text-2xl font-semibold text-gray-800 pb-2"
+              htmlFor="tag"
+            >
+              Post Author
+            </label>
+            <input
+              type="text"
+              className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
+              id="tag"
+              defaultValue={fullname}
+              onChange={(e) => setFullname(e.target.value)}
             />
           </div>
         </div>

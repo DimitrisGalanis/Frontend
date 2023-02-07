@@ -29,15 +29,25 @@ const Post = () => {
   }, [id]);
 
   return (
-    <div className="flex container mx-auto px-0 lg:px-3 pt-14 pb-7">
+    <div className="flex container mx-auto px-0 lg:px-3 pt-8 pb-7">
       <div className="post 2xl:w-5/6">
-        <div className="text-3xl xl:text-4xl font-bold pb-10 text-black/90 px-2 lg:px-0">
+        <p className="text-red-600 font-semibold pb-4">{post.category}</p>
+        <div className="text-3xl xl:text-4xl font-bold pb-7 text-black/90 px-2 lg:px-0">
           {post?.title}
         </div>
-
-        <img src={post?.img} className="w-full h-82 mb-10" alt="" />
-        <div
-          className="pb-12 px-2 lg:px-0"
+        <div className="flex">
+          <p className="pr-2 font-semibold">{post.fullname}&nbsp; </p>
+          <p className=" text-gray-500 pb-2 ">
+            {"| "}&nbsp; {post?.date}
+          </p>
+        </div>
+        <img
+          src={post?.img}
+          className=" w-screen h-97 mb-10 object-fit pr-4"
+          alt=""
+        />
+        <article
+          className="pb-12 px-2 lg:px-0 lg:pr-2"
           dangerouslySetInnerHTML={createMarkup(post?.description)}
         />
         <Comment post_id={id} />
