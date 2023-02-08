@@ -24,6 +24,9 @@ module.exports = {
       backgroundImage: {
         grid: "url('./images/grid.png')",
       },
+      textUnderlineOffset: {
+        6: "6px",
+      },
     },
   },
   plugins: [],
