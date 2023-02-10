@@ -21,12 +21,12 @@ function SportPage() {
 
   return (
     <>
-      <div className=" max-w-8xl mx-auto pt-6 font-bold container">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 pl-2 lg:pl-0">
+      <div className=" max-w-8xl mx-auto pt-3 lg:pt-6 font-bold container">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 pl-2 md:pl-5">
           Όλα τα άρθρα του <span className="text-sky-800/80">Αθλητισμού</span>
         </h1>
       </div>
-      <ul className=" flex flex-col items-center appearance-none max-w-8xl container mx-auto space-y-7 py-10 ml-0 lg:ml-10">
+      <ul className=" flex flex-col items-center appearance-none max-w-8xl container mx-auto space-y-7 py-10 ml-0 md:ml-10">
         {sports_posts.map((post, key) => (
           <div
             key={key}
@@ -38,7 +38,7 @@ function SportPage() {
               alt=""
             />
 
-            <div className="flex flex-col  p-4 leading-normal relative">
+            <div className="flex flex-col p-4 leading-normal relative">
               {/* <div className="pb-4">
               <span className=" bg-sky-800 rounded-sm text-white font-semibold px-1.5 py-1">
                 {post.tag}

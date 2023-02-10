@@ -6,6 +6,7 @@ module.exports = {
         75: "19rem",
         81: "25rem",
         82: "28rem",
+        91: "35rem",
         92: "30rem",
         99: "33rem",
         97: "34rem",
