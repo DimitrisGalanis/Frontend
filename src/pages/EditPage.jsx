@@ -7,10 +7,36 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import EditorToolbar, { modules, formats } from "../components/EditorToolbar";
+import ErrorPage from "../components/ErrorPage2";
 
 function EditPage() {
   const [post, setPost] = useState([]);
   const id = window.location.pathname.split("/")[2];
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  const uploadImage = async (e) => {
+    const file = e.target.files[0];
+    if (file.type === "image/jpeg" || file.type === "image/png") {
+      const base64 = await convertBase64(file);
+      setImg(base64);
+    } else {
+      alert("Επιτρέπονται μόνο αρχεία .jpeg ή .png");
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -69,7 +95,7 @@ function EditPage() {
   };
 
   const navigate = useNavigate();
-  return (
+  return currentUser ? (
     <div className=" container mx-auto max-w-8xl px-2 mt-10 flex-row justify-between pb-20">
       <div className="content">
         <input
@@ -170,7 +196,7 @@ function EditPage() {
               type="text"
               className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
               id="tag"
-              defaultValue={fullname}
+              value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
           </div>
@@ -196,25 +222,33 @@ function EditPage() {
         </div>
 
         <div className="publish border border-neutral-400 px-2">
-          <div className="text-2xl font-semibold text-gray-800">Publish</div>
-          <div className=" font-semibold text-xl  text-cyan-800">
-            Status:{" "}
-            <span className="text-neutral-400 text-lg font-normal ">Draft</span>
+          <div className="text-2xl font-semibold text-gray-800"> Update</div>
+          <div className="text-xl font-normal pb-2 text-black">
+            <input
+              id="img"
+              className=" py-2 block w-full text-sm text-slate-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-violet-50 file:text-cyan-800
+            hover:file:bg-violet-100"
+              type="file"
+              onChange={uploadImage}
+            />
           </div>
 
-          <div className="text-xl font-normal pb-2 text-black">
-            <span className="font-medium text-cyan-800">Upload </span>an image
-          </div>
           <button
             onClick={handleSubmit}
-            className="bg-cyan-800 text-white px-1 py-0.5"
+            className="bg-cyan-800 text-white px-1.5 py-0.5"
           >
             {" "}
-            UPDATE THE POST
+            Update Post
           </button>
         </div>
       </div>
     </div>
+  ) : (
+    <ErrorPage />
   );
 }
 

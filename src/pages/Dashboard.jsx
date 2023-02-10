@@ -5,6 +5,7 @@ import { AuthContext } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
 import edit from "../images/edit.png";
 import deleteIcon from "../images/delete.png";
+import ErrorPage from "../components/ErrorPage";
 
 function Dashboard() {
   const [posts, setPosts] = useState([]);
@@ -20,17 +21,20 @@ function Dashboard() {
     navigate(`/edit/${id}`);
   }
 
-  function handleDelete(e, id) {
+  function handleDelete(e, id, username, uid, fullname) {
     e.preventDefault();
     axios
-      .delete(`http://localhost:8800/api/posts/${id}`)
+      .delete(`http://localhost:8800/api/posts/${id}`, {
+        data: { username, uid, fullname },
+      })
       .then((res) => {
+        alert(res);
         console.log(res);
+        setPosts(posts.filter((post) => post.id !== id));
       })
       .catch((err) => {
         console.log(err);
       });
-    setPosts(posts.filter((post) => post.id !== id));
   }
 
   useEffect(() => {
@@ -47,13 +51,14 @@ function Dashboard() {
 
   return currentUser ? (
     <div className="container mx-auto max-w-8xl py-5">
-      {currentUser && (
-        <h1 className="pl-1 font-semibold py-4 text-lg">
-          Hello, <span className="text-rose-500"> {currentUser.username}</span>
-        </h1>
-      )}
       <div className="flex space-x-10">
         <div className="flex flex-col w-44">
+          {currentUser && (
+            <h1 className="pl-1 font-semibold py-5 text-lg">
+              Hello,{" "}
+              <span className="text-rose-500"> {currentUser.username}</span>
+            </h1>
+          )}
           {/* Dashboard */}
           <div className="flex">
             <svg
@@ -139,7 +144,7 @@ function Dashboard() {
           )}
         </div>
 
-        <div className="container ">
+        <div className="container py-5 ">
           <div className="flex font-semibold text-lg border-b border-zinc-500 bg-neutral-200 ">
             <div className="w-24">ID</div>
             <div className="w-60">Tittle</div>
@@ -172,7 +177,15 @@ function Dashboard() {
                   alt="delete icon"
                   src={deleteIcon}
                   className="ml-36 h-7 object-contain hover:cursor-pointer"
-                  onClick={(e) => handleDelete(e, post.id)}
+                  onClick={(e) =>
+                    handleDelete(
+                      e,
+                      post.id,
+                      currentUser.username,
+                      currentUser.id,
+                      post.fullname
+                    )
+                  }
                 />
               )}
             </div>
@@ -181,19 +194,7 @@ function Dashboard() {
       </div>
     </div>
   ) : (
-    <div className="container mx-auto mx-w-8xl">
-      <h1 className="text-center text-5xl py-10 text-red-600">
-        {" "}
-        Unauthorized Access
-      </h1>
-      <Link to="/login">
-        <div className=" text-center ">
-          <button className="bg-blue-500 text-white text-xl font-bold py-2 px-4 rounded-lg mb-2">
-            Login
-          </button>
-        </div>
-      </Link>
-    </div>
+    <ErrorPage />
   );
 }
 

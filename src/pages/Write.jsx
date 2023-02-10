@@ -7,6 +7,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import EditorToolbar, { modules, formats } from "../components/EditorToolbar";
+import ErrorPage from "../components/ErrorPage2";
 
 function Write() {
   const { currentUser } = useContext(AuthContext);
@@ -16,11 +17,7 @@ function Write() {
   const [img, setImg] = useState("empty");
   const [tag, setTag] = useState("");
   const [date, setDate] = useState("");
-  const [fullname, setFullname] = useState(currentUser.fullname);
-
-  // const handleChange = (e) => {
-  //   setPost((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  // };
+  const [fullname, setFullname] = useState("");
 
   const convertBase64 = (file) => {
     return new Promise((resolve, reject) => {
@@ -75,7 +72,8 @@ function Write() {
   };
 
   const navigate = useNavigate();
-  return (
+
+  return currentUser ? (
     <div className=" container mx-auto max-w-8xl px-2 mt-10 flex-row justify-between pb-20">
       <div className="content">
         <input
@@ -83,14 +81,14 @@ function Write() {
           name="title"
           type="text"
           placeholder="Τίτλος Άρθρου"
-          className="px-3 py-1 text-xl font-bold text-black border border-neutral-500 placeholder:text-gray-400 placeholder:font-normal"
+          className="px-3 py-1 text-xl font-bold text-black border border-neutral-500 placeholder:text-gray-400 placeholder:font-normal mb-4"
         />
         <EditorToolbar toolbarId={"t1"} />
         <ReactQuill
           value={value}
           theme="snow"
           onChange={setValue}
-          className="h-92 w-full pt-5"
+          className="h-92 w-full pt-0.5"
           modules={modules("t1")}
           formats={formats}
         />
@@ -177,7 +175,7 @@ function Write() {
               type="text"
               className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-600 "
               id="tag"
-              defaultValue={fullname}
+              value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
           </div>
@@ -204,20 +202,15 @@ function Write() {
 
         <div className="publish border border-neutral-400 px-2">
           <div className="text-2xl font-semibold text-gray-800">Publish</div>
-          {/* <div className=" font-semibold text-xl  text-cyan-800">
-            Status:{" "}
-            <span className="text-neutral-400 text-lg font-normal ">Draft</span>
-          </div> */}
-
           <div className="text-xl font-normal pb-2 text-black">
             <input
               id="img"
               className=" py-2 block w-full text-sm text-slate-500
-              file:mr-4 file:py-2 file:px-4
-              file:rounded-full file:border-0
-              file:text-sm file:font-semibold
-              file:bg-violet-50 file:text-cyan-800
-              hover:file:bg-violet-100"
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-violet-50 file:text-cyan-800
+            hover:file:bg-violet-100"
               type="file"
               onChange={uploadImage}
             />
@@ -233,6 +226,8 @@ function Write() {
         </div>
       </div>
     </div>
+  ) : (
+    <ErrorPage />
   );
 }
 
