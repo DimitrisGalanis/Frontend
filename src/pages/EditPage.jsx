@@ -104,14 +104,14 @@ function EditPage() {
           name="title"
           type="text"
           placeholder="Τίτλος Άρθρου"
-          className="px-3 py-1 text-xl font-bold text-black border border-neutral-500 placeholder:text-gray-400 placeholder:font-normal"
+          className="px-3 py-1 text-xl font-bold text-black border border-neutral-500 placeholder:text-gray-400 placeholder:font-normal mb-4"
         />
         <EditorToolbar toolbarId={"t1"} />
         <ReactQuill
           value={value}
           theme="snow"
           onChange={setValue}
-          className="h-92 w-full pt-5"
+          className="h-92 w-full pt-0.5"
           modules={modules("t1")}
           formats={formats}
         />
@@ -123,11 +123,23 @@ function EditPage() {
             <input
               type="radio"
               name="cat"
-              value="world"
-              id="world"
+              value="frontposts"
+              id="frontposts"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Κόσμος" className="pl-3">
+            <label htmlFor="frontposts" className="pl-3">
+              Πρωτοσέλιδα
+            </label>
+          </div>
+          <div className="items-center text-cyan-800 font-medium">
+            <input
+              type="radio"
+              name="cat"
+              value="world"
+              id="kosmos"
+              onChange={(e) => setCat(e.target.value)}
+            />
+            <label htmlFor="kosmos" className="pl-3">
               Κόσμος
             </label>
           </div>
@@ -136,9 +148,10 @@ function EditPage() {
               type="radio"
               name="cat"
               value="oikonomia"
+              id="oikonomia"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Οικονομία" className="pl-3">
+            <label htmlFor="oikonomia" className="pl-3">
               Οικονομία
             </label>
           </div>
@@ -147,9 +160,10 @@ function EditPage() {
               type="radio"
               name="cat"
               value="politiki"
+              id="politiki"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Πολιτική" className="pl-3">
+            <label htmlFor="politiki" className="pl-3">
               Πολιτική
             </label>
           </div>
@@ -159,9 +173,10 @@ function EditPage() {
               type="radio"
               name="cat"
               value="sports"
+              id="sports"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Sports" className="pl-3">
+            <label htmlFor="sports" className="pl-3">
               Sports
             </label>
           </div>

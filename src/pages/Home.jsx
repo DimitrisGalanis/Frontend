@@ -1,59 +1,48 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import sea from "../images/sea.jpg";
-import mountain from "../images/mountain.jpg";
-import football from "../images/football.jpg";
 import ImageSlider from "../components/ImageSlider.jsx";
 import FrontPosts from "../components/FrontPosts";
 import Abc from "../components/Abc";
-import Second from "../components/Second";
-import SportPosts from "../components/SportPosts";
+import Kosmos2 from "../components/Kosmos2";
+import Oikonomia2 from "../components/Oikonomia2";
 import axios from "axios";
-import Third from "../components/Third";
+import Sport3 from "../components/Sport3";
 import Splitter from "../components/Splitter";
 
-const slides = [
-  {
-    title: "football",
-    url: sea,
-  },
-  {
-    title: "sea",
-    url: football,
-  },
-  {
-    title: "mountain",
-    url: mountain,
-  },
-];
-
 function Home() {
-  const [posts, setPosts] = useState([]);
+  const [frontPosts, setFrontPosts] = useState([]);
+  const [sport3, setSport3] = useState([]);
+  const [oikonomia2, setOikonomia2] = useState([]);
+  const [kosmos2, setKosmos2] = useState([]);
+
+  const fetchData = () =>
+    Promise.all([
+      axios.get("http://localhost:8800/api/posts"),
+      axios.get("http://localhost:8800/api/posts/sport3"),
+      axios.get("http://localhost:8800/api/posts/oikonomia2"),
+      axios.get("http://localhost:8800/api/posts/kosmos2"),
+    ]).then((res) => {
+      setFrontPosts(res[0].data);
+      setSport3(res[1].data);
+      setOikonomia2(res[2].data);
+      setKosmos2(res[3].data);
+    });
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/api/posts/");
-        setPosts(res.data);
-        console.log(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchData();
   }, []);
 
   return (
     <div className="bg-gray-50 pt-2 shadow-md">
       <Splitter text="Latest News" />
-      <FrontPosts posts={posts} />
-      <Splitter text="Δημοφιλή" />
-      <SportPosts />
-      <Splitter text=" Καιρός" />
-      <Second />
-      <Splitter text="Μετακίνηση" />
-      <Third />
+      <FrontPosts posts={frontPosts} />
+      <Splitter text="Κόσμος" />
+      <Kosmos2 posts={kosmos2} />
+      <Splitter text="Οικονομία" />
+      <Oikonomia2 posts={oikonomia2} />
+      <Splitter text="Αθλητισμός" />
+      <Sport3 posts={sport3} />
     </div>
   );
 }

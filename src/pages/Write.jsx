@@ -100,11 +100,23 @@ function Write() {
             <input
               type="radio"
               name="cat"
-              value="world"
-              id="world"
+              value="frontposts"
+              id="frontposts"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Κόσμος" className="pl-3">
+            <label htmlFor="frontposts" className="pl-3">
+              Πρωτοσέλιδα
+            </label>
+          </div>
+          <div className="items-center text-cyan-800 font-medium">
+            <input
+              type="radio"
+              name="cat"
+              value="world"
+              id="κόσμος"
+              onChange={(e) => setCat(e.target.value)}
+            />
+            <label htmlFor="κόσμος" className="pl-3">
               Κόσμος
             </label>
           </div>
@@ -113,10 +125,10 @@ function Write() {
               type="radio"
               name="cat"
               value="oikonomia"
-              id="Economy"
+              id="οικονομία"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Οικονομία" className="pl-3">
+            <label htmlFor="οικονομία" className="pl-3">
               Οικονομία
             </label>
           </div>
@@ -125,9 +137,10 @@ function Write() {
               type="radio"
               name="cat"
               value="politiki"
+              id="πολιτική"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Πολιτική" className="pl-3">
+            <label htmlFor="πολιτική" className="pl-3">
               Πολιτική
             </label>
           </div>
@@ -137,9 +150,10 @@ function Write() {
               type="radio"
               name="cat"
               value="sports"
+              id="sports"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="Sports" className="pl-3">
+            <label htmlFor="sports" className="pl-3">
               Sports
             </label>
           </div>

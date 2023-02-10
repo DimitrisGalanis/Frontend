@@ -29,17 +29,19 @@ function OikonomiaPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 pt-10 gap-x-12 px-5">
           {oikonomia.map((post, key) => (
             <div key={key}>
-              <img
-                src={post.img}
-                alt="article"
-                className="w-full rounded-sm h-72 lg:h-81 object-cover"
-              />
+              <Link to={`/posts/${post.id}`}>
+                <img
+                  src={post.img}
+                  alt="article"
+                  className="w-full rounded-sm h-72 lg:h-81 object-cover"
+                />
+              </Link>
               <div className="flex text-rose-700 font-medium space-x-5 pt-1">
                 <div className="ml-1 md:ml-0">Οικονομία</div>
                 <div className="">{post.date}</div>
               </div>
               <div className="font-bold text-2xl mb-12 ml-1 mt-1 md:ml-0">
-                <Link to={`/posts/${post.id}`}>{post.title}</Link>
+                {post.title}
               </div>
             </div>
           ))}
