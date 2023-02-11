@@ -18,7 +18,7 @@ function Home() {
 
   const fetchData = () =>
     Promise.all([
-      axios.get("http://localhost:8800/api/posts"),
+      axios.get("http://localhost:8800/api/posts/frontposts"),
       axios.get("http://localhost:8800/api/posts/sport3"),
       axios.get("http://localhost:8800/api/posts/oikonomia2"),
       axios.get("http://localhost:8800/api/posts/kosmos2"),
@@ -34,8 +34,8 @@ function Home() {
   }, []);
 
   return (
-    <div className="bg-gray-50 pt-2 shadow-md">
-      <Splitter text="Latest News" />
+    <div className="bg-gray-50 pt-7 shadow-md font-tasos3 tracking-wide text-bold ">
+      {/* <Splitter text="Πρωτοσέλιδα" /> */}
       <FrontPosts posts={frontPosts} />
       <Splitter text="Κόσμος" />
       <Kosmos2 posts={kosmos2} />

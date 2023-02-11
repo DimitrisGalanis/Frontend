@@ -15,12 +15,18 @@ module.exports = {
       },
       width: {
         97: "45rem",
+        98: "30rem",
       },
       fontFamily: {
         Roboto: ["Rubik Distressed", "cursive"],
         Test: ["Manrope", "sans-serif"],
         Abc: ["Roboto", "sans-serif"],
         Ab: ["Open Sans", "sans-serif"],
+        abcc: ["Noto Serif", "serif"],
+        tasos: ["Fira Sans", "sans-serif"],
+        tasos1: ["Source Sans Pro", "sans-serif"],
+        tasos2: ["Open Sans", "sans-serif"],
+        tasos3: ["Advent Pro", "sans-serif"],
       },
       backgroundImage: {
         grid: "url('./images/grid.png')",

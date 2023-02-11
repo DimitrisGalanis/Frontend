@@ -1,40 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const roh = [
-  {
-    img: "https://images.pexels.com/photos/6496689/pexels-photo-6496689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    tilos: "Τιτλος άρθρου #1 ροης",
-    id: 1,
-  },
-  {
-    img: "https://images.pexels.com/photos/14894649/pexels-photo-14894649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    tilos: "Tιτλος άρθρου #2",
-    id: 2,
-  },
-];
+import axios from "axios";
 
 const Roh = () => {
+  const [roh, setRoh] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:8800/api/posts/posts3");
+        setRoh(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
-    <div className="hidden lg:block container px-0 lg:pl-4 pb-7 pt-20 w-2/6">
+    // w-2/6
+    <div className="hidden lg:block container px-0 lg:pl-4 pb-7 w-98">
       <div className="bg-grid mb-8">
         <span className="bg-black px-3 pt-0.5 pb-1 text-white font-medium text-xl">
           "Ροή Ειδήσεων"
         </span>
       </div>
 
-      <ul>
+      <div>
         {roh.map((roh, key) => (
-          <div className="flex pb-4" key={roh.id}>
-            <img src={roh.img} className="h-36 w-36 rounded-xl" alt="" />
-            <div className="pl-4">
-              <div className=" font-semibold text-lg container">
-                {roh.tilos}
+          <div className="mb-7 flex flex-row  rounded-lg" key={key}>
+            <Link to={`/posts/${roh.id}`}>
+              <div className="w-36 ">
+                <img
+                  className="object-cover w-full rounded-lg h-32 "
+                  src={roh.img}
+                  alt=""
+                />
               </div>
-              <Link to={`/posts/${roh.id}`}>Read more</Link>
+            </Link>
+            <div className="relative">
+              <div className="pl-4 text-md font-bold font-tasos2 leading-tight tracking-normal hover:underline decoration-2 hover:underline-offset-2 decoration-cyan-700/50 ">
+                {roh.title}
+              </div>
+              <Link
+                to={`/posts/${roh.id}`}
+                className=" pl-4 absolute bottom-0 text-cyan-700 font-semibold"
+              >
+                Διαβάστε περισσότερα{" "}
+              </Link>
             </div>
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

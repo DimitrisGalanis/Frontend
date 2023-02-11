@@ -20,7 +20,7 @@ const Post = () => {
       try {
         const res = await axios.get(`http://localhost:8800/api/posts/${id}`);
         setPost(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       } catch (err) {
         console.log(err);
       }
@@ -29,31 +29,35 @@ const Post = () => {
   }, [id]);
 
   return (
-    <div className="flex container mx-auto px-0 lg:px-3 pt-8 pb-7">
-      <div className="post 2xl:w-5/6">
-        <p className="text-red-600 font-semibold pb-4">{post.category}</p>
-        <div className="text-3xl xl:text-4xl font-bold pb-7 text-black/90 px-2 lg:px-0">
-          {post?.title}
-        </div>
-        <div className="flex">
-          <p className="pr-2 font-semibold">{post.fullname}&nbsp; </p>
-          <p className=" text-gray-500 pb-2 ">
-            {"| "}&nbsp; {post?.date}
-          </p>
-        </div>
-        <img
-          src={post?.img}
-          className=" w-screen h-97 mb-10 object-fit pr-4"
-          alt=""
-        />
-        <article
-          className="pb-12 px-2 lg:px-0 lg:pr-2"
-          dangerouslySetInnerHTML={createMarkup(post?.description)}
-        />
-        <Comment post_id={id} />
+    <div className=" container mx-auto px-0 lg:px-24  pt-8 pb-7 ">
+      <p className="text-red-600 font-semibold pb-4 uppercase">
+        {post.category}
+      </p>
+      <div className="text-3xl xl:text-4xl font-bold pb-7 text-black/90 px-2 lg:px-0 w-9/12 font-tasos3 tracking-wider ">
+        {post?.title}
       </div>
+      <div className="flex">
+        <p className="pr-2 font-semibold">{post.fullname}&nbsp; </p>
+        <p className=" text-gray-500 pb-2 ">
+          {"| "}&nbsp; {post?.date}
+        </p>
+      </div>
+      <div className="flex">
+        <div className="post w-full">
+          <img
+            src={post?.img}
+            className="w-full h-99 mb-10 object-cover pr-4"
+            alt=""
+          />
+          <article
+            className="pb-12 lg:px-0 lg:pr-2 font-tasos2 tracking-wide text-lg leading-loose"
+            dangerouslySetInnerHTML={createMarkup(post?.description)}
+          />
+          <Comment post_id={id} />
+        </div>
 
-      <Roh />
+        <Roh />
+      </div>
     </div>
   );
 };

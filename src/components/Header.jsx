@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <header className="border-b border-neutral-400">
-        <div className="container mx-auto max-w-8xl flex justify-between md:px-3 px-0">
+        <div className="container mx-auto max-w-8xl flex justify-between md:px-3 px-0 font-tasos3 ">
           {/* Logo & Text */}
 
           <Link to="/">
@@ -24,13 +24,13 @@ const Header = () => {
                 alt="logo rubiks for brand"
               />
 
-              <div className="text-2xl pt-4 text-gblack md:text-3xl pl-2 font-semibold ">
+              <div className="text-3xl pt-4  md:text-4xl lg:text-4xl pl-2 font-semibold ">
                 Rubiks
               </div>
             </div>
           </Link>
 
-          <div className="hidden md:inline-flex items-center space-x-6 text-lg font-medium">
+          <div className="hidden md:inline-flex items-center space-x-6 text-2xl lg:text-3xl font-medium">
             <Link to="/kosmos">Κόσμος</Link>
 
             <Link to="/oikonomia">Οικονομία</Link>

@@ -20,7 +20,7 @@ const Sport3 = ({ posts }) => {
         </div>
 
         {/* {title} */}
-        <div className="text-start font-medium text-2xl pt-2 pl-2 lg:pl-1 pb-12 text-white">
+        <div className="text-start font-medium text-3xl pt-2 pl-2 lg:pl-1 pb-12 text-white">
           {posts[0]?.title}
         </div>
         <div className="flex justify-start text-white font-medium absolute bottom-0">
@@ -59,7 +59,7 @@ const Sport3 = ({ posts }) => {
         </div>
 
         {/* {title} */}
-        <div className="text-start font-medium text-2xl pt-2 pl-2 lg:pl-1 pb-12 text-white">
+        <div className="text-start font-medium text-3xl pt-2 pl-2 lg:pl-1 pb-12 text-white">
           {posts[1]?.title}
         </div>
         <div className="flex justify-start text-white font-medium absolute bottom-0">
@@ -97,7 +97,7 @@ const Sport3 = ({ posts }) => {
         </div>
 
         {/* {title} */}
-        <div className="text-start font-medium text-2xl pt-2 pl-2 lg:pl-1 pb-12 text-white">
+        <div className="text-start font-medium text-3xl pt-2 pl-2 lg:pl-1 pb-12 text-white">
           {posts[2]?.title}
         </div>
 

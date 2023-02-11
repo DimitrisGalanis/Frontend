@@ -5,7 +5,7 @@ const Oikonomia2 = ({ posts }) => {
   return (
     <>
       <div className="container mx-auto max-w-8xl flex-row lg:flex lg:space-x-3 md:px-3 px-0">
-        <div className="bg-black">
+        <div className="bg-black relative">
           <div className="relative">
             <Link to={`/posts/${posts[0]?.id}`}>
               <img
@@ -21,10 +21,10 @@ const Oikonomia2 = ({ posts }) => {
           </div>
 
           {/* {title} */}
-          <div className=" text-start font-medium text-2xl pt-2 pl-2 lg:pl-1 sm:text-2xl 2xl:text-3xl pb-6 text-white">
+          <div className=" text-start font-medium  pt-2 pl-2 lg:pl-1 text-3xl pb-12 text-white ">
             {posts[0]?.title}
           </div>
-          <div className="flex justify-start text-white font-medium">
+          <div className="flex justify-start text-white font-medium absolute bottom-0">
             <div className="pl-2 pr-7"> {posts[0]?.date} </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const Oikonomia2 = ({ posts }) => {
           </div>
         </div>
 
-        <div className="mt-4 lg:mt-0 bg-black">
+        <div className="mt-4 lg:mt-0 bg-black relative">
           <div className="relative">
             <Link to={`/posts/${posts[1]?.id}`}>
               <img
@@ -59,11 +59,11 @@ const Oikonomia2 = ({ posts }) => {
           </div>
 
           {/* {title} */}
-          <div className="font-medium text-2xl pt-2 pl-2 lg:pl-1 sm:text-2xl 2xl:text-3xl pb-6 text-white">
+          <div className="font-medium  pt-2 pl-2 lg:pl-1 text-3xl pb-12 text-white">
             {posts[1]?.title}
           </div>
 
-          <div className="flex justify-start text-white font-medium">
+          <div className="flex justify-start text-white font-medium absolute bottom-0">
             <div className="pl-2  pr-7"> {posts[1]?.date} </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +79,7 @@ const Oikonomia2 = ({ posts }) => {
                 d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
+
             <div className="pl-1">14:08</div>
           </div>
         </div>

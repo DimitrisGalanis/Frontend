@@ -21,10 +21,10 @@ const Kosmos2 = ({ posts }) => {
           - {posts[0]?.date}
         </div>
 
-        <div className="text-xl font-bold text-gray-800 hover:text-gray-600 pt-4 px-2">
+        <div className="text-3xl font-bold text-gray-800 hover:text-gray-600 pt-4 px-2">
           {posts[0]?.title}
         </div>
-        <div className="text-gray-500 py-3  px-2 ">
+        <div className="text-gray-500 py-3  px-2 text-lg ">
           {posts && parse(posts[0]?.description.slice(0, 60) + "...")}
         </div>
       </div>
@@ -44,10 +44,10 @@ const Kosmos2 = ({ posts }) => {
           </span>{" "}
           - {posts[1]?.date}
         </div>
-        <div className="text-xl font-bold text-gray-800 hover:text-gray-600 pt-4 px-2">
+        <div className="text-3xl font-bold text-gray-800 hover:text-gray-600 pt-4 px-2">
           {posts[1]?.title}
         </div>
-        <div className="text-gray-500 py-3 px-2">
+        <div className="text-gray-500 py-3 px-2 text-lg">
           {posts && parse(posts[1]?.description.slice(0, 60) + "...")}
         </div>
       </div>
@@ -66,11 +66,11 @@ const Kosmos2 = ({ posts }) => {
           </span>{" "}
           - {posts[2]?.date}
         </div>
-        <div className="text-xl font-bold text-gray-800 hover:text-gray-600 pt-4 px-2">
+        <div className="text-3xl font-bold text-gray-800 hover:text-gray-600 pt-4 px-2">
           {posts[2]?.title}
         </div>
-        <div className="text-gray-500 py-3 px-2">
-          {posts && parse(posts[2]?.description.slice(0, 60) + "...")}
+        <div className="text-gray-500 py-3 px-2 text-lg">
+          {posts && parse(posts[2]?.description.slice(0, 70) + "...")}
         </div>
       </div>
     </div>

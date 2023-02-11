@@ -21,12 +21,12 @@ function OikonomiaPage() {
 
   return (
     <>
-      <div className=" max-w-8xl mx-auto pt-6 container">
+      <div className=" max-w-8xl mx-auto pt-6 container px-0 xl:px-12">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 pl-2 xl:pl-4">
           Όλα τα άρθρα της <span className="text-rose-800/80">Οικονομίας</span>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 pt-10 gap-x-12 px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-10 gap-x-12 px-0 lg:px-5">
           {oikonomia.map((post, key) => (
             <div key={key}>
               <Link to={`/posts/${post.id}`}>
