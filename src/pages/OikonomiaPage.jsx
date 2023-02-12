@@ -20,7 +20,7 @@ function OikonomiaPage() {
   }, []);
 
   return (
-    <>
+    oikonomia && (
       <div className=" max-w-8xl mx-auto pt-6 container px-0 xl:px-12">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 pl-2 xl:pl-4">
           Όλα τα άρθρα της <span className="text-rose-800/80">Οικονομίας</span>
@@ -47,7 +47,7 @@ function OikonomiaPage() {
           ))}
         </div>
       </div>
-    </>
+    )
   );
 }
 

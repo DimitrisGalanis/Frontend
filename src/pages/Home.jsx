@@ -18,10 +18,10 @@ function Home() {
 
   const fetchData = () =>
     Promise.all([
-      axios.get("http://localhost:8800/api/posts/frontposts"),
-      axios.get("http://localhost:8800/api/posts/sport3"),
-      axios.get("http://localhost:8800/api/posts/oikonomia2"),
-      axios.get("http://localhost:8800/api/posts/kosmos2"),
+      axios.get(process.env.REACT_APP_rubiks_api + "api/posts/frontposts"),
+      axios.get(process.env.REACT_APP_rubiks_api + "api/posts/sport3"),
+      axios.get(process.env.REACT_APP_rubiks_api + "api/posts/oikonomia2"),
+      axios.get(process.env.REACT_APP_rubiks_api + "api/posts/kosmos2"),
     ]).then((res) => {
       setFrontPosts(res[0].data);
       setSport3(res[1].data);

@@ -40,7 +40,9 @@ function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/posts/");
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + "/api/posts/"
+        );
         setPosts(res.data);
       } catch (err) {
         console.log(err);
