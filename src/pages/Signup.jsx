@@ -22,15 +22,17 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8800/api/auth/register", input).then(
-      (response) => {
-        alert(response);
-        navigate("/login");
-      },
-      (error) => {
-        setErr(error.response.data);
-      }
-    );
+    axios
+      .post(process.env.REACT_APP_rubiks_api + "api/auth/register", input)
+      .then(
+        (response) => {
+          alert(response);
+          navigate("/login");
+        },
+        (error) => {
+          setErr(error.response.data);
+        }
+      );
   };
 
   const navigate = useNavigate();

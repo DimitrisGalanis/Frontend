@@ -10,7 +10,9 @@ function SportPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/posts/sport");
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + "api/posts/sport"
+        );
         setSports_Posts(res.data);
       } catch (err) {
         console.log(err);

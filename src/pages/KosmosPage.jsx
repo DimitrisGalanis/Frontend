@@ -8,7 +8,9 @@ function Kosmos() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/posts/kosmos");
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + "api/posts/kosmos"
+        );
         setOikonomia(res.data);
       } catch (err) {
         console.log(err);

@@ -10,7 +10,9 @@ function PoliticsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/posts/politics");
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + "api/posts/politics"
+        );
         setPolitics(res.data);
       } catch (err) {
         console.log(err);

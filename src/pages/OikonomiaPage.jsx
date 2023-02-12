@@ -9,7 +9,7 @@ function OikonomiaPage() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8800/api/posts/oikonomia"
+          process.env.REACT_APP_rubiks_api + "api/posts/oikonomia"
         );
         setOikonomia(res.data);
       } catch (err) {

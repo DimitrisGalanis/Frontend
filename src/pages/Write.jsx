@@ -47,7 +47,7 @@ function Write() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8800/api/posts", {
+      .post(process.env.REACT_APP_rubiks_api + "api/posts", {
         title,
         description: value,
         img: img,

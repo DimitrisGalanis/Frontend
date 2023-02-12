@@ -41,7 +41,7 @@ function Dashboard() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          process.env.REACT_APP_rubiks_api + "/api/posts/"
+          process.env.REACT_APP_rubiks_api + "api/posts/"
         );
         setPosts(res.data);
       } catch (err) {

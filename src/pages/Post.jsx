@@ -18,7 +18,9 @@ const Post = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/api/posts/${id}`);
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + `api/posts/${id}`
+        );
         setPost(res.data);
         // console.log(res.data);
       } catch (err) {

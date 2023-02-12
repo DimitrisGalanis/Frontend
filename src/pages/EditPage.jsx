@@ -41,7 +41,9 @@ function EditPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/api/posts/${id}`);
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + `api/posts/${id}`
+        );
         setPost(res.data);
         setValue(res.data.description);
         setTitle(res.data.title);
