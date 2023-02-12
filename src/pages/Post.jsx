@@ -48,7 +48,7 @@ const Post = () => {
         <div className="post w-full">
           <img
             src={post?.img}
-            className="w-full h-99 mb-10 object-cover pr-4"
+            className="w-full h-99 mb-10 object-cover pr-0 lg:pr-2"
             alt=""
           />
           <article
