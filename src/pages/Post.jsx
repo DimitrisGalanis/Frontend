@@ -32,7 +32,7 @@ const Post = () => {
 
   return (
     <div className=" container mx-auto px-0 lg:px-24  pt-8 pb-7 ">
-      <p className="text-red-600 font-semibold pb-4 uppercase">
+      <p className="text-red-600 font-semibold pb-4 uppercase px-2 lg:px-0">
         {post.category}
       </p>
       <div className="text-3xl xl:text-4xl font-bold pb-7 text-black/90 px-2 lg:px-0 w-9/12 font-tasos3 tracking-wider ">
@@ -52,7 +52,7 @@ const Post = () => {
             alt=""
           />
           <article
-            className="pb-12 lg:px-0 lg:pr-2 font-tasos2 tracking-wide text-lg leading-loose"
+            className="pb-5 lg:pb-12 lg:px-0 lg:pr-2 font-tasos2 tracking-wide text-lg leading-loose px-2"
             dangerouslySetInnerHTML={createMarkup(post?.description)}
           />
           <Comment post_id={id} />
