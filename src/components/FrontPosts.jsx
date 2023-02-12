@@ -74,70 +74,74 @@ const FrontPosts = ({ posts }) => {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 space-x-0 lg:space-x-2">
-          <div className="relative">
-            <img
-              src={posts[2]?.img}
-              alt="rolex"
-              className="h-72 object-cover w-full"
-            />
-            <div className="absolute bottom-1/2 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
-              <span className="text-white"> {posts[2]?.tag} </span>
+          <Link to={`/posts/${posts[2]?.id}`} className="relative pt-2 lg:pt-0">
+            <div className="relative">
+              <img
+                src={posts[2]?.img}
+                alt="rolex"
+                className="h-72 object-cover w-full"
+              />
+              <div className="absolute bottom-1/2 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
+                <span className="text-white"> {posts[2]?.tag} </span>
+              </div>
+              <h3 className="absolute bottom-0 left-3 xl:left-6 pb-14 text-white font-semibold text-xl">
+                {" "}
+                {posts[2]?.title}
+              </h3>
+
+              <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 inline mr-2 text-rose-500"
+                  fill="none"
+                  viewBox="0 2 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                {posts[2]?.date}
+              </h3>
             </div>
-            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-14 text-white font-semibold text-xl">
-              {" "}
-              {posts[2]?.title}
-            </h3>
+          </Link>
 
-            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 inline mr-2 text-rose-500"
-                fill="none"
-                viewBox="0 2 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              {posts[2]?.date}
-            </h3>
-          </div>
+          <Link to={`/posts/${posts[3]?.id}`} className="relative pt-2 lg:pt-0">
+            <div className="relative pt-2 lg:pt-0">
+              <img
+                src={posts[3]?.img}
+                alt=""
+                className="h-72 object-cover w-full"
+              />
+              <div className="absolute bottom-1/2 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
+                <span className="text-white">{posts[3]?.tag}</span>
+              </div>
+              <h3 className="absolute bottom-0 left-3 xl:left-6 pb-14 text-white font-semibold text-xl">
+                {posts[3]?.title}
+              </h3>
 
-          <div className="relative pt-2 lg:pt-0">
-            <img
-              src={posts[3]?.img}
-              alt=""
-              className="h-72 object-cover w-full"
-            />
-            <div className="absolute bottom-1/2 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
-              <span className="text-white">{posts[3]?.tag}</span>
+              <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 inline mr-2 text-rose-500"
+                  fill="none"
+                  viewBox="0 2 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                {posts[3]?.date}
+              </h3>
             </div>
-            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-14 text-white font-semibold text-xl">
-              {posts[3]?.title}
-            </h3>
-
-            <h3 className="absolute bottom-0 left-3 xl:left-6 pb-4 text-white font-semibold">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 inline mr-2 text-rose-500"
-                fill="none"
-                viewBox="0 2 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              {posts[3]?.date}
-            </h3>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
