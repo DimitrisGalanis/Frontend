@@ -8,7 +8,9 @@ const Roh = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/posts/posts3");
+        const res = await axios.get(
+          process.env.REACT_APP_rubiks_api + "api/posts/posts3"
+        );
         setRoh(res.data);
       } catch (err) {
         console.log(err);

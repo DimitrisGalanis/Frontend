@@ -10,14 +10,14 @@ export const AuthContexProvider = ({ children }) => {
 
   const login = async (inputs) => {
     await axios
-      .post("http://localhost:8800/api/auth/login", inputs)
+      .post(process.env.REACT_APP_rubiks_api + "api/auth/login", inputs)
       .then((res) => {
         setCurrentUser(res.data);
       });
   };
 
   const logout = async (inputs) => {
-    await axios.post("http://localhost:8800/api/auth/logout");
+    await axios.post(process.env.REACT_APP_rubiks_api + "api/auth/logout");
     setCurrentUser(null);
   };
 
