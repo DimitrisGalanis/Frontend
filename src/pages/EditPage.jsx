@@ -71,7 +71,7 @@ function EditPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:8800/api/posts", {
+      .put(process.env.REACT_APP_rubiks_api + "api/posts", {
         title,
         description: value,
         img: img,
