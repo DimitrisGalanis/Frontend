@@ -6,7 +6,7 @@ const FrontPosts = ({ posts }) => {
     <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 px-0 md:px-3">
       <Link to={`/posts/${posts[0]?.id}`} className="relative pr-1">
         <img
-          src={`https://` + posts[0]?.img.slice(7, posts[0]?.img.slice.length)}
+          src={`https://` + posts[0]?.img.slice(7, posts[0]?.img.length)}
           alt="frontpost"
           className=" h-80 lg:h-96 w-full object-cover"
         />

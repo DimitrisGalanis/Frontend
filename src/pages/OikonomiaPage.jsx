@@ -31,7 +31,7 @@ function OikonomiaPage() {
             <div key={key}>
               <Link to={`/posts/${post.id}`}>
                 <img
-                  src={post.img}
+                  src={`https://` + post.img.slice(7, post.img.length)}
                   alt="article"
                   className="w-full rounded-sm h-72 lg:h-81 object-cover"
                 />

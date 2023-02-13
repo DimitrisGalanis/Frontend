@@ -36,7 +36,7 @@ function PoliticsPage() {
           >
             <img
               className="w-full object-cover rounded-t-lg h-72 md:w-96 md:rounded-none md:rounded-l-lg"
-              src={post.img}
+              src={`https://` + post.img.slice(7, post.img.length)}
               alt=""
             />
 

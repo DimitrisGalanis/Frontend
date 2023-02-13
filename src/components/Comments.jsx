@@ -10,7 +10,7 @@ const Comments = ({ post_id }) => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          REACT_APP_rubiks_api + `api/comments/${post_id}`
+          process.env.REACT_APP_rubiks_api + `api/comments/${post_id}`
         );
         setComments(res.data);
         // console.log(res.data);

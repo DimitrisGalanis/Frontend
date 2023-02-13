@@ -9,7 +9,7 @@ const Sport3 = ({ posts }) => {
           <Link to={`/posts/${posts[0]?.id}`}>
             <img
               className="h-72 xl:h-80 w-screen object-cover"
-              src={posts[0]?.img}
+              src={`https://` + posts[0]?.img.slice(7, posts[0]?.img.length)}
               alt=""
             />
           </Link>
@@ -48,7 +48,7 @@ const Sport3 = ({ posts }) => {
           <Link to={`/posts/${posts[1]?.id}`}>
             <img
               className="h-72 md:h-80 xl:h-80 w-screen object-cover"
-              src={posts[1]?.img}
+              src={`https://` + posts[1]?.img.slice(7, posts[1]?.img.length)}
               alt=""
             />
           </Link>
@@ -87,7 +87,7 @@ const Sport3 = ({ posts }) => {
           <Link to={`/posts/${posts[2]?.id}`}>
             <img
               className="h-72 md:h-80 xl:h-80 w-screen object-cover"
-              src={posts[2]?.img}
+              src={`https://` + posts[2]?.img.slice(7, posts[2]?.img.length)}
               alt="w"
             />
           </Link>

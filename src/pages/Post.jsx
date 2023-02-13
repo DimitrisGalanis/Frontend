@@ -11,6 +11,7 @@ function createMarkup(text) {
 
 const Post = () => {
   const [post, setPost] = useState([]);
+  const [img_, setImg_] = useState("");
 
   const location = useLocation();
   const id = location.pathname.split("/")[2];
@@ -23,6 +24,7 @@ const Post = () => {
         );
         setPost(res.data);
         // console.log(res.data);
+        setImg_(res.data.img);
       } catch (err) {
         console.log(err);
       }
@@ -47,7 +49,7 @@ const Post = () => {
       <div className="flex">
         <div className="post w-full">
           <img
-            src={post?.img}
+            src={`https://` + img_?.slice(7, img_?.length)}
             className="w-full h-99 mb-10 object-cover pr-0 lg:pr-2"
             alt=""
           />
