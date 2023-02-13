@@ -8,7 +8,7 @@ const Kosmos2 = ({ posts }) => {
       <div className=" shadow-md  w-full xl:w-97">
         <Link to={`/posts/${posts[0]?.id}`}>
           <img
-            src={posts[0]?.img}
+            src={`https://` + posts[0]?.img.slice(7, posts[0]?.img.length)}
             alt="travel"
             className="w-full h-75  object-cover"
           />
@@ -32,7 +32,7 @@ const Kosmos2 = ({ posts }) => {
       <div className="shadow-md w-full xl:w-97 pt-5 md:pt-0">
         <Link to={`/posts/${posts[1]?.id}`}>
           <img
-            src={posts[1]?.img}
+            src={`https://` + posts[1]?.img.slice(7, posts[1]?.img.length)}
             alt="travel"
             className="w-full h-75 object-cover"
           />
@@ -55,7 +55,7 @@ const Kosmos2 = ({ posts }) => {
       <div className="shadow-md w-full xl:w-97 pt-5 md:pt-0">
         <Link to={`/posts/${posts[2]?.id}`}>
           <img
-            src={posts[2]?.img}
+            src={`https://` + posts[2]?.img.slice(7, posts[2]?.img.length)}
             className="w-full h-75 object-cover"
             alt=""
           />

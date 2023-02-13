@@ -9,7 +9,7 @@ const CommentPostForm = ({ postid, comments, setComments }) => {
   const handleCommentSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8800/api/comments", {
+      .post(REACT_APP_rubiks_api + "api/comments", {
         name,
         email,
         comment,

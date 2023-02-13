@@ -6,7 +6,7 @@ const FrontPosts = ({ posts }) => {
     <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-8xl space-x-0 lg:space-x-2 px-0 md:px-3">
       <Link to={`/posts/${posts[0]?.id}`} className="relative pr-1">
         <img
-          src={posts[0]?.img}
+          src={`https://` + posts[0]?.img.slice(7, posts[0]?.img.slice.length)}
           alt="frontpost"
           className=" h-80 lg:h-96 w-full object-cover"
         />
@@ -41,7 +41,7 @@ const FrontPosts = ({ posts }) => {
       <div className="pt-2 lg:pt-0">
         <Link to={`/posts/${posts[1]?.id}`} className="relative pt-2 lg:pt-0">
           <img
-            src={posts[1]?.img}
+            src={`https://` + posts[1]?.img.slice(7, posts[1]?.img.length)}
             alt="2nd fontpage"
             className="h-75 w-full object-cover pb-2"
           />
@@ -77,7 +77,7 @@ const FrontPosts = ({ posts }) => {
           <Link to={`/posts/${posts[2]?.id}`} className="relative pt-2 lg:pt-0">
             <div className="relative">
               <img
-                src={posts[2]?.img}
+                src={`https://` + posts[2]?.img.slice(7, posts[2]?.img.length)}
                 alt="rolex"
                 className="h-72 object-cover w-full"
               />
@@ -112,7 +112,7 @@ const FrontPosts = ({ posts }) => {
           <Link to={`/posts/${posts[3]?.id}`} className="relative pt-2 lg:pt-0">
             <div className="relative pt-2 lg:pt-0">
               <img
-                src={posts[3]?.img}
+                src={`https://` + posts[3]?.img.slice(7, posts[3]?.img.length)}
                 alt=""
                 className="h-72 object-cover w-full"
               />

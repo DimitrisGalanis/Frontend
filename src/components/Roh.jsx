@@ -35,7 +35,7 @@ const Roh = () => {
               <div className="w-36 ">
                 <img
                   className="object-cover w-full rounded-lg h-32 "
-                  src={roh.img}
+                  src={`https://` + roh.img.slice(7, roh.img.length)}
                   alt=""
                 />
               </div>
