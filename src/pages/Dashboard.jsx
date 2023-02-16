@@ -9,7 +9,7 @@ import ErrorPage from "../components/ErrorPage";
 
 function Dashboard() {
   const [posts, setPosts] = useState([]);
-  const { currentUser, logout } = useContext(AuthContext);
+  const { currentUser, logout, token } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handlelogout = () => {
@@ -24,8 +24,8 @@ function Dashboard() {
   function handleDelete(e, id, username, uid, fullname) {
     e.preventDefault();
     axios
-      .delete(`http://localhost:8800/api/posts/${id}`, {
-        data: { username, uid, fullname },
+      .delete(process.env.REACT_APP_rubiks_api + `api/posts/${id}`, {
+        data: { username, uid, fullname, token },
       })
       .then((res) => {
         alert(res);

@@ -10,7 +10,7 @@ import EditorToolbar, { modules, formats } from "../components/EditorToolbar";
 import ErrorPage from "../components/ErrorPage2";
 
 function Write() {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, token } = useContext(AuthContext);
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [cat, setCat] = useState("");
@@ -57,6 +57,7 @@ function Write() {
         uid: currentUser.id,
         username: currentUser.username,
         fullname: fullname,
+        token: token,
       })
       .then(
         (response) => {

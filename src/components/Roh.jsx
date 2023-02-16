@@ -42,7 +42,7 @@ const Roh = () => {
             </Link>
             <div className="relative">
               <div className="pl-4 text-md font-bold font-tasos2 leading-tight tracking-normal hover:underline decoration-2 hover:underline-offset-2 decoration-cyan-700/50 ">
-                {roh.title.slice(0, 65)}
+                {roh.title.slice(0, 62)}
               </div>
               <Link
                 to={`/posts/${roh.id}`}

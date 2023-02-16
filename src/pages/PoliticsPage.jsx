@@ -13,6 +13,8 @@ function PoliticsPage() {
         const res = await axios.get(
           process.env.REACT_APP_rubiks_api + "api/posts/politics"
         );
+
+        console.log(res);
         setPolitics(res.data);
       } catch (err) {
         console.log(err);

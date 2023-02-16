@@ -59,7 +59,7 @@ function EditPage() {
     fetchData();
   }, [id]);
 
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, token } = useContext(AuthContext);
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [cat, setCat] = useState("");
@@ -82,6 +82,7 @@ function EditPage() {
         username: currentUser.username,
         fullname: fullname,
         id: id,
+        token: token,
       })
       .then(
         (response) => {

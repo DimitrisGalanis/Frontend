@@ -34,7 +34,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="bg-gray-50 pt-7 shadow-md font-tasos3 tracking-wide text-bold ">
+    <div className="bg-gray-50 py-7 shadow-md font-tasos3 tracking-wide text-bold ">
       {/* <Splitter text="Πρωτοσέλιδα" /> */}
       <FrontPosts posts={frontPosts} />
       <Splitter text="Κόσμος" />
