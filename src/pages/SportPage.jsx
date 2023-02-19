@@ -24,7 +24,7 @@ function SportPage() {
   return (
     <>
       <div className=" max-w-8xl mx-auto pt-3 lg:pt-6 font-bold container">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 pl-2 md:pl-5">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-none tracking-tight text-gray-900 pl-2 md:pl-6">
           Όλα τα άρθρα του <span className="text-sky-800/80">Αθλητισμού</span>
         </h1>
       </div>
@@ -32,7 +32,7 @@ function SportPage() {
         {sports_posts.map((post, key) => (
           <div
             key={key}
-            className="flex flex-col  bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-4xl hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+            className="flex flex-col  bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-4xl hover:bg-gray-50"
           >
             <img
               className="w-full object-cover rounded-t-lg h-72 md:w-96 md:rounded-none md:rounded-l-lg"

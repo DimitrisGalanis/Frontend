@@ -28,8 +28,8 @@ function Dashboard() {
         data: { username, uid, fullname, token },
       })
       .then((res) => {
-        alert(res);
-        console.log(res);
+        alert(res.data);
+        // console.log(res);
         setPosts(posts.filter((post) => post.id !== id));
       })
       .catch((err) => {

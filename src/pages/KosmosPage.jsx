@@ -35,12 +35,16 @@ function Kosmos() {
                   className="w-full rounded-sm h-72 lg:h-81 object-cover"
                 />
               </Link>
-              <div className="flex text-rose-700 font-medium space-x-5 pt-1">
-                <div className="ml-1 md:ml-0">Κόσμος</div>
-                <div className="">{post.date}</div>
-              </div>
-              <div className="font-bold text-2xl mb-12 ml-1 mt-1 md:ml-0">
-                {post.title}
+              <div className="shadow-md  p-1.5 mb-4">
+                <div className="flex text-rose-700 font-medium space-x-5 pt-1">
+                  <div className="ml-1 md:ml-0">Κόσμος</div>
+                  <div className="">{post.date}</div>
+                </div>
+                <Link to={`/posts/${post.id}`}>
+                  <div className="font-bold text-2xl ml-1 mt-1 md:ml-0">
+                    {post.title}
+                  </div>
+                </Link>
               </div>
             </div>
           ))}
