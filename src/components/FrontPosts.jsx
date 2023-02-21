@@ -11,7 +11,7 @@ const FrontPosts = ({ posts }) => {
           className=" h-80 lg:h-96 w-full object-cover"
         />
         <div className="absolute bottom-1/2 xl:bottom-1/2 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
-          <span className="text-white">{posts[0]?.category}</span>
+          <span className="text-white">{posts[0]?.tag}</span>
         </div>
 
         <h3 className="absolute bottom-1/4 left-3 xl:left-4 text-white font-semibold text-xl lg:text-4xl px-1">
@@ -47,7 +47,7 @@ const FrontPosts = ({ posts }) => {
           />
 
           <div className="absolute bottom-1/2 xl:bottom-1/3 left-3 xl:left-6 font-bold bg-rose-600 px-2 py-0.5">
-            <span className="text-white"> {posts[1]?.category} </span>
+            <span className="text-white"> {posts[1]?.tag} </span>
           </div>
 
           <h3 className="absolute px-1 bottom-14 left-3 xl:left-6 text-white font-semibold text-xl backdrop-blur-lg bg-white/20">
